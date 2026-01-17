@@ -56,7 +56,7 @@ const Navbar = ({ lang, setLang }: { lang: "hi" | "en", setLang: (l: "hi" | "en"
             <h1 className="font-gotu font-black text-white text-sm md:text-xl leading-none">
               {lang === "hi" ? "संपतिया उइके" : "Sampatiya Uikey"}
             </h1>
-            <p className="text-[#E46B2E] text-[8px] md:text-[10px] font-bold uppercase tracking-widest mt-1">
+            <p className="text-[#E46B2E] text-[8px] md:text-[10px] font-bold uppercase  mt-1">
               {lang === "hi" ? "कैबिनेट मंत्री" : "Cabinet Minister"}
             </p>
           </div>
@@ -102,7 +102,7 @@ const Navbar = ({ lang, setLang }: { lang: "hi" | "en", setLang: (l: "hi" | "en"
             >
               {/* HEADER (Fixed at top) */}
               <div className="p-8 flex justify-between items-center shrink-0 border-b border-white/5">
-                <span className="text-white/40 text-[10px] font-black tracking-[0.3em] uppercase">Navigation</span>
+                <span className="text-white/40 text-[10px] font-black  uppercase">Navigation</span>
                 <button onClick={() => setIsOpen(false)} className="h-12 w-12 flex items-center justify-center text-white bg-white/5 rounded-full border border-white/10">
                   <X size={24}/>
                 </button>

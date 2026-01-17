@@ -96,7 +96,7 @@ const MainLayout = () => {
                   variants={textRevealVars}
                   initial="hidden"
                   animate="visible"
-                  className="text-white text-[12vw] md:text-[6vw] font-gotu font-black tracking-tighter flex items-center gap-4"
+                  className="text-white text-[12vw] md:text-[6vw] font-gotu font-black flex items-center gap-4"
                 >
                   {firstName.join("")} 
                   <span className="text-[#E46B2E] font-light">{lastName.join("")}</span>
@@ -119,7 +119,7 @@ const MainLayout = () => {
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
                   transition={{ delay: 0.8, duration: 1 }}
-                  className="text-white/40 text-[10px] md:text-[12px] font-black tracking-[0.6em] uppercase"
+                  className="text-white/40 text-[10px] md:text-[12px] font-black  uppercase"
                 >
                   {isHi ? "कैबिनेट मंत्री • मध्यप्रदेश शासन" : "Cabinet Minister • Govt. of MP"}
                 </motion.p>

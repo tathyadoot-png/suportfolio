@@ -20,7 +20,7 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
   }, [images.length]);
 
   return (
-    <section id="home" className="relative min-h-screen w-full bg-green flex flex-col lg:flex-row overflow-hidden">
+    <section id="home" className="relative min-h-screen w-full bg-green flex flex-col lg:flex-row overflow-hidden ">
       
       {/* 1. RIGHT SIDE: THE VISUAL (Top on Mobile, 45% Width on Desktop) */}
       <div className="relative w-full lg:w-[45%] h-[50vh] lg:h-screen order-first lg:order-last">
@@ -48,7 +48,7 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
         <div className="absolute bottom-8 right-6 lg:bottom-12 lg:right-8 flex items-center gap-4 lg:gap-8 rotate-[-90deg] origin-right translate-x-4">
            <div className="h-[1px] w-12 lg:w-16 bg-white/20" />
            <p className="flex items-center gap-3 lg:gap-4">
-             <span className="text-white/40 text-[7px] lg:text-[9px] font-bold uppercase tracking-[0.4em] lg:tracking-[0.6em]">Service</span>
+             <span className="text-white/40 text-[7px] lg:text-[9px] font-bold uppercase">Service</span>
              <span className="text-primary font-gotu text-3xl lg:text-5xl font-black italic">20+</span>
              <Zap className="text-primary -rotate-90" size={16} fill="currentColor" />
            </p>
@@ -56,7 +56,7 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
       </div>
 
       {/* 2. LEFT SIDE: CONTENT AREA (Bottom on Mobile, 55% Width on Desktop) */}
-      <div className="relative w-full lg:w-[55%] flex flex-col justify-center px-6 sm:px-10 md:px-12 lg:px-24 py-12 lg:py-20 z-20">
+      <div className="relative w-full lg:w-[55%] flex flex-col justify-center px-6 sm:px-10 md:px-12 lg:px-24 py-12 pt-48  lg:py-20 z-20">
         
         {/* Minimalist Badge */}
         <motion.div 
@@ -65,9 +65,7 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
           className="flex items-center gap-3 mb-6 lg:mb-8"
         >
           <span className="h-[1px] w-6 lg:w-8 bg-primary/40" />
-          <span className="text-primary text-[9px] lg:text-[10px] font-bold uppercase tracking-widest">
-            {isHi ? "कैबिनेट मंत्री" : "Cabinet Minister"}
-          </span>
+         
         </motion.div>
 
         {/* Name Section */}
@@ -75,7 +73,7 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
           <motion.h1 
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            className="font-gotu text-[15vw] sm:text-[12vw] lg:text-[9rem] font-black text-white leading-[1.1] lg:leading-[1] tracking-tighter"
+            className="font-gotu text-[15vw] sm:text-[12vw] lg:text-[9rem] font-black text-white leading-[1.1] lg:leading-[1] "
           >
             {isHi ? "संपतिया" : "SAMPATIYA"}
           </motion.h1>
@@ -83,7 +81,7 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="font-gotu text-[15vw] sm:text-[12vw] lg:text-[9rem] font-black text-primary italic leading-[1.1] lg:leading-[1] tracking-tighter mt-1"
+            className="font-gotu text-[15vw] sm:text-[12vw] lg:text-[9rem] font-black text-primary italic leading-[1.1] lg:leading-[1]  mt-1"
           >
             {isHi ? "उइके" : "UIKEY"}
           </motion.h1>
@@ -118,8 +116,8 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
               <MoveUpRight size={24} className="relative z-10 text-white lg:size-[28px] group-hover:scale-110 transition-transform" />
             </button>
             <div className="flex flex-col">
-              <span className="text-white font-black text-[10px] lg:text-xs uppercase tracking-widest">{isHi ? "संपर्क सूत्र" : "Get In Touch"}</span>
-              <span className="text-white/30 text-[8px] lg:text-[9px] uppercase tracking-tighter mt-1">{isHi ? "मध्यप्रदेश शासन" : "Govt. of MP"}</span>
+              <span className="text-white font-black text-[10px] lg:text-xs uppercase ">{isHi ? "संपर्क सूत्र" : "Get In Touch"}</span>
+              <span className="text-white/30 text-[8px] lg:text-[9px] uppercase  mt-1">{isHi ? "मध्यप्रदेश शासन" : "Govt. of MP"}</span>
             </div>
           </div>
         </motion.div>
