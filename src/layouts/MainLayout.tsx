@@ -20,7 +20,7 @@ const MainLayout = () => {
 
   useEffect(() => {
     localStorage.setItem("lang", lang);
-    const timer = setTimeout(() => setLoading(false), 3000); // 3 seconds is sweet spot
+    const timer = setTimeout(() => setLoading(false), 3200);
     return () => clearTimeout(timer);
   }, [lang]);
 
@@ -37,138 +37,111 @@ const MainLayout = () => {
   const firstName = useMemo(() => splitText(isHi ? "संपतिया" : "SAMPATIYA"), [isHi]);
   const lastName = useMemo(() => splitText(isHi ? "उइके" : "UIKEY"), [isHi]);
 
-  const textContainer: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.05, delayChildren: 0.3 }
+  // Modern Animation Variants
+  const containerVars: Variants = {
+    exit: {
+      transition: { staggerChildren: 0.1 }
     }
   };
 
-  const letterAnim: Variants = {
-    hidden: { opacity: 0, y: 40, filter: "blur(10px)" },
+  const panelVars: Variants = {
+    initial: { scaleY: 1 },
+    exit: { 
+      scaleY: 0,
+      transition: { duration: 1, ease: [0.85, 0, 0.15, 1] } 
+    }
+  };
+
+  const textRevealVars: Variants = {
+    hidden: { y: "100%", opacity: 0 },
     visible: { 
-      opacity: 1, 
       y: 0, 
-      filter: "blur(0px)",
-      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } 
+      opacity: 1,
+      transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] }
     }
   };
 
   return (
     <>
-      <style>{`
-        .modern-loader { 
-          background: #021411; 
-          overflow: hidden; 
-        }
-        .bg-grid {
-          background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.02) 1px, transparent 0);
-          background-size: 40px 40px;
-        }
-        .glow-sphere {
-          width: 40vw; height: 40vw;
-          background: radial-gradient(circle, rgba(18, 87, 76, 0.3) 0%, transparent 70%);
-          filter: blur(60px);
-          position: absolute;
-          animation: float 8s ease-in-out infinite;
-        }
-        @keyframes float {
-          0%, 100% { transform: translate(0, 0); }
-          50% { transform: translate(50px, -50px); }
-        }
-      `}</style>
-
       <AnimatePresence mode="wait">
         {loading && (
           <motion.div
             key="loader"
-            className="fixed inset-0 z-[9999] modern-loader flex flex-col items-center justify-center px-4"
-            exit={{ 
-              y: "-100%",
-              transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] } 
-            }}
+            variants={containerVars}
+            initial="initial"
+            exit="exit"
+            className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-transparent"
           >
-            {/* Ambient Background */}
-            <div className="absolute inset-0 bg-grid" />
-            <div className="glow-sphere top-[-10%] right-[-10%]" />
-            <div className="glow-sphere bottom-[-10%] left-[-10%]" />
-
-            {/* BJP Logo Top */}
+            {/* Split Panels - Modern Way to Reveal */}
             <motion.div 
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="absolute top-12"
-            >
-              <img src={bjp} className="w-12 opacity-40 brightness-0 invert" alt="BJP" />
-            </motion.div>
-
-            {/* Text Reveal */}
-            <motion.div 
-              variants={textContainer}
-              initial="hidden"
-              animate="visible"
-              className="z-10 text-center"
-            >
-              <div className="overflow-hidden mb-2">
-                <h2 className={`flex justify-center text-white text-[12vw] sm:text-[8vw] md:text-[5vw] font-gotu font-black tracking-tight`}>
-                  {firstName.map((l, i) => (
-                    <motion.span key={i} variants={letterAnim} className="inline-block">
-                      {l}
-                    </motion.span>
-                  ))}
-                </h2>
-              </div>
-
-              <motion.div 
-                initial={{ scaleX: 0 }} 
-                animate={{ scaleX: 1 }} 
-                transition={{ duration: 1, delay: 0.8 }}
-                className="h-[2px] bg-gradient-to-r from-transparent via-[#E46B2E] to-transparent w-full max-w-[300px] mx-auto my-4" 
-              />
-
-              <div className="overflow-hidden">
-                <h2 className={`flex justify-center text-[#E46B2E] text-[10vw] sm:text-[7vw] md:text-[4.5vw] font-gotu font-light tracking-[0.2em]`}>
-                  {lastName.map((l, i) => (
-                    <motion.span key={i} variants={letterAnim} className="inline-block">
-                      {l}
-                    </motion.span>
-                  ))}
-                </h2>
-              </div>
-            </motion.div>
-
-            {/* Bottom Progress Indicator */}
-            <div className="absolute bottom-16 w-48 h-[2px] bg-white/5 overflow-hidden">
-              <motion.div 
-                initial={{ x: "-100%" }}
-                animate={{ x: "100%" }}
-                transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-                className="w-full h-full bg-[#E46B2E]"
-              />
-            </div>
+              variants={panelVars}
+              className="absolute inset-0 bg-[#0A1A17] origin-top z-0" 
+            />
             
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
-              className="absolute bottom-10 text-white/50 text-[10px] uppercase tracking-[0.5em] font-bold"
-            >
-              {isHi ? "मध्यप्रदेश शासन" : "GOVT. OF MADHYA PRADESH"}
-            </motion.p>
+            {/* Content Wrapper */}
+            <div className="relative z-10 flex flex-col items-center">
+              {/* Subtle Symbol */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 0.2, scale: 1 }}
+                transition={{ duration: 1.5 }}
+                className="mb-8"
+              >
+                <img src={bjp} className="w-16 grayscale brightness-200" alt="" />
+              </motion.div>
+
+              {/* Main Name Reveal */}
+              <div className="overflow-hidden py-2">
+                <motion.h2 
+                  variants={textRevealVars}
+                  initial="hidden"
+                  animate="visible"
+                  className="text-white text-[12vw] md:text-[6vw] font-gotu font-black tracking-tighter flex items-center gap-4"
+                >
+                  {firstName.join("")} 
+                  <span className="text-[#E46B2E] font-light">{lastName.join("")}</span>
+                </motion.h2>
+              </div>
+
+              {/* Minimal Animated Divider */}
+              <div className="relative w-full max-w-[400px] h-[1px] mt-4 overflow-hidden">
+                <motion.div 
+                  initial={{ x: "-100%" }}
+                  animate={{ x: "0%" }}
+                  transition={{ duration: 1.5, ease: "easeInOut" }}
+                  className="w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent"
+                />
+              </div>
+
+              {/* Designation Reveal */}
+              <div className="overflow-hidden mt-4">
+                <motion.p
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  transition={{ delay: 0.8, duration: 1 }}
+                  className="text-white/40 text-[10px] md:text-[12px] font-black tracking-[0.6em] uppercase"
+                >
+                  {isHi ? "कैबिनेट मंत्री • मध्यप्रदेश शासन" : "Cabinet Minister • Govt. of MP"}
+                </motion.p>
+              </div>
+            </div>
+
+            {/* Background Texture Overlay */}
+            <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
           </motion.div>
         )}
       </AnimatePresence>
 
       {!loading && (
         <motion.div 
-          initial={{ opacity: 0 }} 
-          animate={{ opacity: 1 }} 
-          transition={{ duration: 0.8 }}
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 1, ease: "easeOut" }}
         >
           <Navbar lang={lang} setLang={setLang} />
           <StickySocial /> 
           <ScrollToTop />
-          <main className="min-h-screen bg-[#fcfcfc] overflow-x-hidden">
+          <main className="min-h-screen bg-white">
             <Outlet context={{ lang }} />
           </main>
           <Footer lang={lang} />
