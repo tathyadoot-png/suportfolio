@@ -46,7 +46,7 @@ const ContributionsSection = ({ lang }: ContributionsSectionProps) => {
       <div className="mx-auto w-full relative z-10">
         {/* Reusable Section Heading - Full Width */}
         <SectionHeading
-          subtitle={isHi ? "विजनरी नेतृत्व" : "Visionary Leadership"}
+       
           title={isHi ? "प्रमुख कार्य एवं उपलब्धियां" : "Major Contributions & Works"}
         />
 

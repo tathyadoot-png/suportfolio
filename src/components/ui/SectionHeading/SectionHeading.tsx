@@ -31,9 +31,9 @@ const SectionHeading = ({ title }: SectionHeadingProps) => {
 
       {/* 2. MAIN HEADING - REVEAL & SHIMMER ANIMATION */}
       <div className="relative z-10">
-        <h2 className="font-gotu text-4xl md:text-5xl lg:text-6xl font-[1000] text-center leading-[1.1] tracking-tight uppercase flex flex-wrap justify-center gap-x-3">
+        <h2 className="font-gotu text-4xl md:text-5xl lg:text-6xl font-[1000] text-center leading-[1.1] uppercase flex flex-wrap justify-center gap-x-3">
           {words.map((word, idx) => (
-            <div key={idx} className="relative overflow-hidden px-1">
+            <div key={idx} className="relative overflow-hidden px-1 pb-3 pt-4">
               <motion.span 
                 initial={{ y: "100%" }}
                 whileInView={{ y: 0 }}

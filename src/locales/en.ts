@@ -4,11 +4,10 @@ const en = {
     about: "About",
     journey: "Journey",
     governance: "Governance",
-    contributions: "Contributions",
+    // contributions: "Contributions",
     jalJeevan: "Jal Jeevan Mission",
     vichar: "Article",
     gallery: "Gallery",
-    contact: "Contact",
   },
 
   cta: {

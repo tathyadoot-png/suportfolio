@@ -9,6 +9,8 @@ import LeadershipSection from "./sections/leadership/LeadershipSection";
 import GallerySection from "./sections/gallery/GallerySection";
 import ContactSection from "./sections/contact/ContactSection";
 import AudioVideoSection from "./sections/AudioVideo/AudioVideoSection";
+import GovernanceSection from "./sections/Governance/GovernanceSection";
+import JalJeevanSection from "./sections/jalJeevan/JalJeevanSection";
 // import HeroSection from "./sections/hero/HeroSection";
 
 const HomePage = () => {
@@ -25,21 +27,27 @@ const HomePage = () => {
 <section id="journey">
   <JourneySection lang={lang} />
 </section>
+<section id="governance">
+  <GovernanceSection lang={lang} />
+</section>
+<section id="jalJeevan">
+  <JalJeevanSection lang={lang} />
+</section>
 <section id="contributions">
-  <ContributionsSection lang={lang} />
+  {/* <ContributionsSection lang={lang} /> */}
 </section>
 <section id="achievements">
-  <AchievementsSection lang={lang} />
+  {/* <AchievementsSection lang={lang} /> */}
 </section>
 <section id="leadership">
-  <LeadershipSection lang={lang} />
+  {/* <LeadershipSection lang={lang} /> */}
 </section>
 
 <section id="media">
   <GallerySection  />
 </section>
 <section id="media2">
-  <AudioVideoSection lang={lang} />
+  {/* <AudioVideoSection lang={lang} /> */}
 </section>
 <section id="contact">
   <ContactSection  />
