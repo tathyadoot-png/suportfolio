@@ -7,7 +7,7 @@ import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 
 // Images imports
 import img12 from "@/assets/12.jpg";
-import img13 from "@/assets/13.jpg";
+import img13 from "@/assets/13.jpeg";
 import img14 from "@/assets/14.jpg";
 import img15 from "@/assets/15.jpg";
 import img16 from "@/assets/16.jpg";

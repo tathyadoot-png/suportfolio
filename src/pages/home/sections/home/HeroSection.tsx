@@ -1,159 +1,138 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useLayoutEffect, useRef } from "react";
-import gsap from "gsap";
+import { useState, useEffect } from "react";
 import { PiFlowerLotusThin } from "react-icons/pi";
+import { MoveUpRight, Zap, Sparkles } from "lucide-react";
 import hi from "@/locales/hi";
 import en from "@/locales/en";
 
 // Images
-import slid1 from "@/assets/slid1.jpeg"
-import slid2 from "@/assets/slid2.jpeg"
-import slid3 from "@/assets/slid3.jpeg"
-import slid4 from "@/assets/slid4.jpeg"
-import slid5 from "@/assets/slid5.jpeg"
-import slid6 from "@/assets/slid6.jpeg"
-import slid7 from "@/assets/slid7.jpeg"
-import img4 from "@/assets/4.jpg";
+import slid1 from "@/assets/slid1.jpeg";
+import slid2 from "@/assets/slid2.jpeg";
+import slid3 from "@/assets/slid3.jpeg";
 
-
-export type Lang = "hi" | "en";
-
-interface HeroSectionProps {
-  lang?: Lang;
-}
-
-const HeroSection = ({ lang = "hi" }: HeroSectionProps) => {
-  const t = lang === "hi" ? hi : en;
+const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
   const isHi = lang === "hi";
-
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const images = [slid2, slid1, slid3, slid4, slid5, slid6, slid7];
+  const images = [slid1, slid2, slid3];
   const [currentIndex, setCurrentIndex] = useState(0);
-useEffect(() => {
-  const interval = setInterval(() => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
-  }, 3000); // 4.5 seconds
 
-  return () => clearInterval(interval);
-}, [images.length]);
-
-  // GSAP same hi rahega... (tl code)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
-    <section
-      ref={containerRef}
-      className="relative min-h-screen flex items-center bg-bg pt-28 pb-16 lg:pt-32 lg:pb-20 overflow-hidden"
-    >
-      {/* Background Decor */}
-      <div className="absolute inset-0 -z-10 pointer-events-none opacity-30">
-        <div className="absolute top-[5%] left-[-5%] w-[400px] lg:w-[600px] h-[400px] lg:h-[600px] bg-primary/10 blur-[120px] lg:blur-[150px] rounded-full" />
-        <div className="absolute bottom-0 right-[-5%] w-[350px] lg:w-[500px] h-[350px] lg:h-[500px] bg-secondary/5 blur-[120px] lg:blur-[150px] rounded-full" />
-      </div>
-
-      {/* Main Grid: Mobile pe padding kam, Desktop pe wahi royal px-36 */}
-      <div className="mx-auto w-full px-6 md:px-12 lg:px-36 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        
-        {/* ================= LEFT CONTENT ================= */}
-        {/* Mobile pe center text (optional), Desktop pe strictly LEFT aligned */}
-        <div className="relative z-20 text-center lg:text-left order-2 lg:order-1">
-          
-          {/* Badge */}
-          <div className="hero-badge mb-6 lg:mb-10">
-            <div className="inline-flex items-center gap-3 rounded-full bg-primary/5 px-5 lg:px-6 py-2 lg:py-2.5 text-[10px] lg:text-[11px] font-black uppercase tracking-[0.25em] text-green border border-primary/20 shadow-sm">
-              <PiFlowerLotusThin className="text-lg lg:text-xl animate-pulse" />
-              {isHi ? "जनसेवा का संकल्प" : "Commitment to People"}
-            </div>
-          </div>
-
-          {/* NAME: Proper scaling for desktop matras */}
-          <div className="relative mb-8 lg:mb-10 space-y-0 lg:space-y-2">
-            <h1 className="hero-text font-gotu font-bold uppercase tracking-tight text-primary leading-[1.1] text-[clamp(2.8rem,7vw,6rem)]">
-              {isHi ? "राजेन्द्र" : "RAJENDRA"}
-            </h1>
-            <h1 className="hero-text font-gotu font-bold uppercase tracking-tight text-secondary leading-[1.1] text-[clamp(2.8rem,7vw,6rem)]">
-              {isHi ? "शुक्ल" : "SHUKLA"}
-            </h1>
-          </div>
-
- {/* DETAILS */}
-<div className="hero-details space-y-6 lg:space-y-8">
-  <div className="flex items-start justify-center lg:justify-start gap-4 lg:gap-6">
-    {/* Decorative Line - desktop pe thodi badi */}
-    <div className="h-[2px] w-8 lg:w-16 bg-primary rounded-full mt-3 lg:mt-4 flex-shrink-0" />
+    <section id="home" className="relative min-h-screen w-full bg-green flex flex-col lg:flex-row overflow-hidden">
+      
     
-    <div className="space-y-1 lg:space-y-2">
-      <p className="font-gotu text-xl lg:text-3xl font-bold text-secondary italic leading-tight">
-        {isHi ? "उपमुख्यमंत्री" : "Deputy Chief Minister"}
-      </p>
-      <p className="font-gotu text-base lg:text-xl font-medium text-secondary/80">
-        {isHi 
-          ? "लोक स्वास्थ्य एवं चिकित्सा शिक्षा मंत्री, मध्य प्रदेश" 
-          : "Minister for Public Health and Medical Education, MP"}
-      </p>
-    </div>
-  </div>
 
-  <p className="font-martel text-base lg:text-xl text-text-muted leading-relaxed max-w-lg mx-auto lg:mx-0">
-    {isHi
-      ? "स्वस्थ समाज, सशक्त प्रदेश और बेहतर भविष्य के लिए निरंतर कार्य और समर्पण।"
-      : "Continuous dedication towards a healthy society and a prosperous state."}
-  </p>
-</div>
+      {/* 1. LEFT SIDE: CONTENT AREA (60% Width) */}
+      <div className="relative w-full lg:w-[55%] flex flex-col justify-center px-6 md:px-12 lg:px-24 py-20 z-20">
+        
+        {/* Minimalist Badge */}
+        <motion.div 
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="flex items-center gap-3 mb-8"
+        >
+          <span className="h-[1px] w-8 bg-primary/40" />
+          <span className="text-primary text-[10px] font-bold uppercase  py-6">
+            {isHi ? "कैबिनेट मंत्री" : "Cabinet Minister"}
+          </span>
+        </motion.div>
 
-          {/* CTA BUTTONS: Mobile pe stack, Desktop pe row inline */}
-          <div className="mt-10 lg:mt-14 flex flex-col sm:flex-row gap-4 lg:gap-6 justify-center lg:justify-start hero-details">
-            <a href="#contact" className="group relative overflow-hidden rounded-full bg-primary px-10 lg:px-12 py-4 lg:py-5 text-xs lg:text-sm font-black uppercase tracking-widest text-white shadow-2xl shadow-primary/30 transition-transform hover:scale-105 active:scale-95 text-center">
-              <span className="relative z-10">{t.cta.contact}</span>
-              <div className="absolute inset-0 bg-secondary translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            </a>
-            
-            <a href="#about" className="rounded-full border-2 border-green px-10 lg:px-12 py-4 lg:py-5 text-xs lg:text-sm font-black uppercase tracking-widest text-green hover:bg-bg-soft transition-all duration-300 text-center">
-              {isHi ? "परिचय" : "About"}
-            </a>
-          </div>
+        {/* Name Section with Better Kerning */}
+        <div className="relative">
+          <motion.h1 
+            initial={{ y: 40, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            className="font-gotu text-[14vw] lg:text-[9rem] font-black text-white leading-[1] tracking-tighter"
+          >
+            {isHi ? "संपतिया" : "SAMPATIYA"}
+          </motion.h1>
+          <motion.h1 
+            initial={{ y: 40, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="font-gotu text-[14vw] lg:text-[9rem] font-black text-primary italic leading-[1] tracking-tighter mt-1"
+          >
+            {isHi ? "उइके" : "UIKEY"}
+          </motion.h1>
+          
+          {/* Subtle Back Text */}
+          <span className="absolute -top-16 -left-8 text-[18rem] font-black text-white/[0.02] pointer-events-none select-none hidden lg:block">
+            MP
+          </span>
         </div>
 
-        {/* ================= RIGHT CAROUSEL (Big Screen focus) ================= */}
-        <div className="hero-image-container relative h-[450px] sm:h-[550px] lg:h-[700px] w-full flex items-center justify-center lg:justify-end order-1 lg:order-2">
-          
-          <div className="relative w-full h-full rounded-[3rem] lg:rounded-[4.5rem] overflow-hidden border-[10px] lg:border-[14px] border-white shadow-[0_50px_100px_rgba(0,0,0,0.12)] bg-bg-soft">
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={currentIndex}
-                src={images[currentIndex]}
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 1.2, ease: "easeInOut" }}
-                className="absolute inset-0 w-full h-full object-cover object-top"
-                alt="Rajendra Shukla"
-              />
-            </AnimatePresence>
+        {/* Clean Sub-content Block */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="mt-12 max-w-lg"
+        >
+          <div className="pl-6 border-l border-primary/30 space-y-4">
+            <p className="text-white/90 text-xl lg:text-2xl font-medium font-gotu">
+              {isHi ? "लोक स्वास्थ्य यांत्रिकी मंत्री" : "Minister of Public Health Engineering"}
+            </p>
+            <p className="text-white/50 text-base lg:text-lg leading-relaxed font-martel">
+              {isHi 
+                ? "स्वच्छ जल और सशक्त समाज के निर्माण हेतु समर्पित नेतृत्व।" 
+                : "Dedicated leadership for clean water and an empowered society."}
+            </p>
+          </div>
 
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-secondary/70 via-transparent to-transparent pointer-events-none" />
-            
-            {/* Progress Dots */}
-            <div className="absolute bottom-8 lg:bottom-12 left-1/2 -translate-x-1/2 flex gap-3 z-30">
-              {images.map((_, idx) => (
-                <div 
-                  key={idx} 
-                  className={`h-1 lg:h-1.5 transition-all duration-700 rounded-full ${currentIndex === idx ? "w-10 lg:w-14 bg-primary" : "w-2 lg:w-3 bg-white/40"}`} 
-                />
-              ))}
+          {/* Action Button - High End Look */}
+          <div className="flex items-center gap-8 mt-12">
+            <button className="group relative flex items-center justify-center h-20 w-20 rounded-full border border-white/10 hover:border-primary/50 transition-all duration-500 overflow-hidden">
+              <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+              <MoveUpRight size={28} className="relative z-10 text-white group-hover:scale-110 transition-transform" />
+            </button>
+            <div className="flex flex-col">
+              <span className="text-white font-black text-xs uppercase tracking-widest">{isHi ? "संपर्क सूत्र" : "Get In Touch"}</span>
+              <span className="text-white/30 text-[9px] uppercase tracking-tighter mt-1">{isHi ? "मध्यप्रदेश शासन" : "Govt. of MP"}</span>
             </div>
           </div>
-
-          {/* Floating Badge: Desktop pe Grand, Mobile pe chota and Adjusted */}
-          <motion.div 
-            className="floating-card absolute -top-4 -right-2 lg:-top-8 lg:-right-4 bg-white p-6 lg:p-10 rounded-2xl lg:rounded-[3rem] shadow-2xl z-40 border border-border text-center"
-          >
-            <p className="text-green font-gotu font-black text-3xl lg:text-5xl leading-none">20+</p>
-            <p className="font-martel text-[8px] lg:text-[11px] font-black text-secondary/60 uppercase tracking-widest mt-2 lg:mt-3">Years of Service</p>
-          </motion.div>
-        </div>
-
+        </motion.div>
       </div>
+
+      {/* 2. RIGHT SIDE: THE VISUAL (45% Width) */}
+      <div className="relative w-full lg:w-[45%] h-[60vh] lg:h-screen">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, scale: 1.05 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
+            className="absolute inset-0 w-full h-full"
+          >
+            <img 
+              src={images[currentIndex]} 
+              className="w-full h-full object-cover object-top brightness-[0.7] " 
+              alt="Sampatiya Uikey"
+            />
+            {/* Smooth Blending Overlays */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#021411] via-transparent to-transparent lg:bg-gradient-to-l lg:from-[#021411] lg:via-transparent" />
+            <div className="absolute inset-0 bg-[#021411]/20 mix-blend-multiply" />
+          </motion.div>
+        </AnimatePresence>
+
+        {/* Experience Label - Clean & Vertical */}
+        <div className="absolute bottom-12 right-8 flex items-center gap-8 rotate-[-90deg] origin-right translate-x-4">
+           <div className="h-[1px] w-16 bg-white/20" />
+           <p className="flex items-center gap-4">
+             <span className="text-white/40 text-[9px] font-bold uppercase tracking-[0.6em]">Service</span>
+             <span className="text-primary font-gotu text-5xl font-black italic">20+</span>
+             <Zap className="text-primary -rotate-90" size={20} fill="currentColor" />
+           </p>
+        </div>
+      </div>
+
+      {/* Subtle Floating Lotus */}
+     
     </section>
   );
 };

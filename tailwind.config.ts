@@ -18,23 +18,23 @@ const config: Config = {
       },
     },
     extend: {
-      
-    colors: {
-  primary: "var(--color-primary)",     // Kesariya
-  secondary: "var(--color-secondary)", // Blue
-  green: "var(--color-green)",         // Vikas Green
 
-  text: "var(--color-text)",
-  muted: "var(--color-text-muted)",
+      colors: {
+        primary: "var(--color-primary)",     // Kesariya
+        secondary: "var(--color-secondary)", // Blue
+        green: "var(--color-green)",         // Vikas Green
 
-  bg: "var(--color-bg)",
-  "bg-soft": "var(--color-bg-soft)",
+        text: "var(--color-text)",
+        muted: "var(--color-text-muted)",
 
-  border: "var(--color-border)",
-},
+        bg: "var(--color-bg)",
+        "bg-soft": "var(--color-bg-soft)",
 
-      
-     fontFamily: {
+        border: "var(--color-border)",
+      },
+
+
+      fontFamily: {
         amita: ['"Amita"', 'serif'],
         asar: ['"Asar"', 'serif'],
         gotu: ['"Gotu"', 'sans-serif'],
@@ -47,6 +47,13 @@ const config: Config = {
       transitionTimingFunction: {
         smooth: "cubic-bezier(0.4, 0, 0.2, 1)",
       },
+      borderWidth: {
+    '3': '3px',
+  },
+  backgroundImage: {
+    'gradient-kesariya': 'linear-gradient(to right, var(--color-primary), #f18a55)',
+    'gradient-governance': 'linear-gradient(to bottom, var(--color-secondary), #1e3a8a)',
+  },
     },
   },
   plugins: [require("tailwindcss-animate")],

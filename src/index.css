@@ -9,7 +9,7 @@
   :root {
     --color-primary: #E46B2E;      /* Kesariya */
     --color-secondary: #112250;    /* Governance Blue */
-    --color-green: #159172;        /* Vikas Green */
+    --color-green: #196458;        /* Vikas Green */
 
     --color-text: #1E3A8A;
     --color-text-muted: #6B7280;
@@ -25,7 +25,7 @@
     @apply bg-bg text-text antialiased;
     font-family: 'Martel';
   }
-
+ 
   /* 🔹 All headings = Gotu */
   h1,
   h2,
@@ -71,5 +71,41 @@
            px-6 py-2 rounded-md font-semibold
            hover:bg-green hover:text-white
            transition-all;
+  }
+}
+@layer components {
+  /* 🟠 Kesariya Section (Hero or Important Announcements) */
+  .section-kesariya {
+    @apply bg-primary text-white py-16 px-6;
+    background-image: radial-gradient(circle at top right, rgba(255,255,255,0.1), transparent);
+  }
+
+  /* 🔵 Governance Section (Stats or Achievements) */
+  .section-blue {
+    @apply bg-secondary text-white py-16 px-6;
+  }
+
+  /* 🟢 Vikas Section (Gallery or Projects) */
+  .section-green {
+    @apply bg-green text-white py-16 px-6;
+  }
+
+  /* ⚪ Soft Card UI (Neta's Achievements/Portfolio Cards) */
+  .card-neta {
+    @apply bg-white border border-border rounded-xl p-6 shadow-soft 
+           hover:shadow-navbar transition-all duration-300 
+           hover:-translate-y-1 border-b-4 border-b-primary;
+  }
+
+  /* 🔹 Highlight Text Utility */
+  .text-glow-green {
+    @apply text-green font-bold;
+    text-shadow: 0 0 10px rgba(21, 145, 114, 0.2);
+  }
+
+  /* 🇮🇳 Decorative Border (Bottom of images or sections) */
+  .border-tri-color {
+    border-bottom: 5px solid;
+    border-image: linear-gradient(to right, #E46B2E 33%, #FFFFFF 33% 66%, #159172 66%) 1;
   }
 }

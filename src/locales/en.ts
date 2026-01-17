@@ -1,18 +1,18 @@
 const en = {
   nav: {
     home: "Home",
-    about: "About",       
-
+    about: "About",
     journey: "Journey",
+    governance: "Governance",
     contributions: "Contributions",
-    achievements: "Achievements",
-    leadership: "Leadership",
-    media: "Gallery",
+    jalJeevan: "Jal Jeevan Mission",
+    vichar: "Article",
+    gallery: "Gallery",
     contact: "Contact",
   },
 
   cta: {
-    contact: "Contact Us",
+    contact: "Public Connect",
   },
 };
 
