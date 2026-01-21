@@ -139,7 +139,7 @@ const GovernanceSection = ({ lang }: GovernanceSectionProps) => {
               <h4 className="text-xl md:text-2xl lg:text-3xl font-gotu font-bold text-[#E46B2E] italic">
                 {isHi ? "उनका संकल्प—" : "Her Resolution—"}
               </h4>
-              <p className="font-martel text-base md:text-lg lg:text-xl opacity-90 max-w-2xl leading-relaxed">
+              <p className="font-martel text-sm md:text-lg lg:text-xl opacity-90 max-w-2xl leading-relaxed">
                 {isHi 
                   ? "स्वस्थ, सशक्त और विकसित मध्यप्रदेश का निर्माण है।" 
                   : "To build a healthy, empowered and developed Madhya Pradesh."}

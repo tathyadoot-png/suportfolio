@@ -56,7 +56,7 @@ const Navbar = ({ lang, setLang }: { lang: "hi" | "en", setLang: (l: "hi" | "en"
             <h1 className="font-gotu font-black text-white text-sm md:text-xl leading-none">
               {lang === "hi" ? "संपतिया उइके" : "Sampatiya Uikey"}
             </h1>
-            <p className="text-[#E46B2E] text-[8px] md:text-[10px] font-bold uppercase  mt-1">
+            <p className="text-[#eb7e48] text-[10px] md:text-[12px] font-bold uppercase  mt-1">
               {lang === "hi" ? "कैबिनेट मंत्री" : "Cabinet Minister"}
             </p>
           </div>

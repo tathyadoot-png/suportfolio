@@ -61,7 +61,7 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3 p-3 md:p-4 bg-white border border-gray-100 rounded-xl md:rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                     <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-green shrink-0 mt-0.5" />
-                    <span className="font-martel text-xs md:text-sm text-gray-600">{item}</span>
+                    <span className="font-martel text-sm md:text-lg text-gray-600">{item}</span>
                   </div>
                 ))}
               </div>
@@ -80,7 +80,7 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
                     isHi ? "स्थानीय जल स्रोतों का पुनर्जीवन" : "Revival of local sources",
                     isHi ? "नियमित मॉनिटरिंग एवं फील्ड निरीक्षण" : "Regular field inspections"
                   ].map((p, i) => (
-                    <li key={i} className="flex items-center gap-2 font-martel text-xs md:text-sm text-gray-500">
+                    <li key={i} className="flex items-center gap-2 font-martel text-sm md:text-lg text-gray-500">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" /> {p}
                     </li>
                   ))}
@@ -114,7 +114,7 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
                     isHi ? "महिलाओं को कठिनाइयों से मुक्ति" : "Relief for women",
                     isHi ? "स्वच्छता एवं पोषण में सुधार" : "Better nutrition"
                   ].map((txt, i) => (
-                    <div key={i} className="text-[9px] md:text-xs font-martel text-gray-400 flex items-center gap-2">
+                    <div key={i} className="text-[12px] md:text-xs font-martel text-gray-400 flex items-center gap-2">
                       <div className="w-1 h-1 rounded-full bg-green shrink-0" /> {txt}
                     </div>
                   ))}
@@ -133,7 +133,7 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
                   <p className="text-[9px] md:text-xs opacity-60 uppercase tracking-widest font-bold">The Ultimate Vision</p>
                 </div>
               </div>
-              <p className="font-martel text-xs md:text-base leading-relaxed opacity-90 text-left">
+              <p className="font-martel text-sm md:text-lg leading-relaxed opacity-90 text-left">
                 {isHi 
                   ? "उनका स्पष्ट लक्ष्य है कि मध्यप्रदेश का प्रत्येक परिवार नियमित, पर्याप्त और गुणवत्तापूर्ण पेयजल प्राप्त करे और जल संकट से मुक्त गरिमापूर्ण जीवन जी सके।"
                   : "Her goal is for every family to receive regular and quality water for a life of dignity."}

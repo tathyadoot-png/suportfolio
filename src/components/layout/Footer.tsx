@@ -34,7 +34,7 @@ const Footer = ({ lang }: { lang: Lang }) => {
               <a 
                 key={idx} 
                 href={link.path} 
-                className="text-[10px] md:text-xs font-bold text-secondary/60 hover:text-primary transition-all uppercase tracking-widest whitespace-nowrap"
+                className="text-[12px] md:text-xs font-bold text-secondary/60 hover:text-primary transition-all uppercase tracking-widest whitespace-nowrap"
               >
                 {link.label}
               </a>
@@ -50,7 +50,7 @@ const Footer = ({ lang }: { lang: Lang }) => {
               © {new Date().getFullYear()} All Rights Reserved
             </p>
             <div className="h-4 w-px bg-white/10 hidden sm:block" />
-            <p className="text-white/60 text-[10px] md:text-xs font-medium text-center md:text-left">
+            <p className="text-white/60 text-[11px] md:text-xs font-medium text-center md:text-left">
               {isHi ? "प्रगतिशील विन्ध्य, समृद्ध प्रदेश" : "Progressive Vindhya, Prosperous State"}
             </p>
           </div>
