@@ -78,26 +78,26 @@ const GovernanceSection = ({ lang }: GovernanceSectionProps) => {
   ];
 
   return (
-    <section className="bg-white py-16 relative" id="governance">
-      <div className="container mx-auto px-4 max-w-6xl">
+    <section className="bg-white relative px-4 md:px-8 lg:px-28 py-10 md:py-16" id="governance">
+      <div className=" mx-auto">
         <SectionHeading title={isHi ? "प्रशासन एवं नेतृत्व" : "Governance & Leadership"} />
 
         {/* Compact Grid with Full Content */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {data.map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="group relative flex flex-col sm:flex-row gap-5 bg-[#F9FAFB] p-7 rounded-[2rem] border border-transparent hover:border-gray-200 hover:bg-white hover:shadow-xl transition-all duration-500"
+              className="group relative flex flex-col sm:flex-row gap-5 bg-[#F9FAFB] p-6 md:p-8 rounded-[1.5rem] md:rounded-[2rem] border border-transparent hover:border-gray-200 hover:bg-white hover:shadow-xl transition-all duration-500"
             >
               {/* Vertical Color Accent */}
-              <div className="absolute left-0 top-8 bottom-8 w-1.5 rounded-r-full" style={{ backgroundColor: item.color }} />
+              <div className="absolute left-0 top-8 bottom-8 w-1.5 rounded-r-full hidden sm:block" style={{ backgroundColor: item.color }} />
               
               {/* Icon Box */}
               <div 
-                className="w-12 h-12 rounded-2xl flex items-center justify-center text-white flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-500"
+                className="w-12 h-12 md:w-14 md:h-14 rounded-xl md:rounded-2xl flex items-center justify-center text-white flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-500"
                 style={{ backgroundColor: item.color }}
               >
                 {item.icon}
@@ -105,14 +105,14 @@ const GovernanceSection = ({ lang }: GovernanceSectionProps) => {
 
               {/* Text Area */}
               <div className="flex-1 space-y-4">
-                <h3 className="text-xl font-gotu font-bold text-gray-900 leading-tight border-b border-gray-100 pb-3">
+                <h3 className="text-lg md:text-xl lg:text-2xl font-gotu font-bold text-gray-900 leading-tight border-b border-gray-100 pb-3">
                   {isHi ? item.titleHi : item.titleEn}
                 </h3>
                 <div className="space-y-3">
                   {(isHi ? item.contentHi : item.contentEn).map((point, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 opacity-40" style={{ color: item.color }} />
-                      <p className="font-martel text-gray-600 text-sm md:text-base leading-relaxed">
+                      <p className="font-martel text-gray-600 text-sm md:text-base leading-relaxed text-left md:text-justify">
                         {point}
                       </p>
                     </div>
@@ -123,38 +123,38 @@ const GovernanceSection = ({ lang }: GovernanceSectionProps) => {
           ))}
         </div>
 
-        {/* Sankalp Banner - Full As-is Text */}
+        {/* Sankalp Banner */}
         <motion.div 
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          className="mt-12 p-8 md:p-10 rounded-[2.5rem] bg-gradient-to-br from-[#196458] to-[#124d43] text-white relative overflow-hidden shadow-2xl shadow-green/20"
+          className="mt-12 md:mt-20 p-6 md:p-10 lg:p-14 rounded-[2rem] md:rounded-[3rem] bg-gradient-to-br from-[#196458] to-[#124d43] text-white relative overflow-hidden shadow-2xl"
         >
-          {/* Decorative Pattern */}
-          <div className="absolute top-0 right-0 p-4 opacity-10">
-             <Droplets size={120} />
+          {/* Decorative Pattern - Scaled for mobile */}
+          <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
+              <Droplets className="w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40" />
           </div>
 
-          <div className="relative z-10 flex flex-col md:flex-row gap-8 items-center">
-            <div className="text-center md:text-left space-y-2">
-              <h4 className="text-2xl font-gotu font-bold text-primary italic">
+          <div className="relative z-10 flex flex-col lg:flex-row gap-8 lg:items-center">
+            <div className="text-center lg:text-left space-y-3 md:space-y-4">
+              <h4 className="text-xl md:text-2xl lg:text-3xl font-gotu font-bold text-[#E46B2E] italic">
                 {isHi ? "उनका संकल्प—" : "Her Resolution—"}
               </h4>
-              <p className="font-martel text-lg opacity-90 max-w-2xl">
+              <p className="font-martel text-base md:text-lg lg:text-xl opacity-90 max-w-2xl leading-relaxed">
                 {isHi 
                   ? "स्वस्थ, सशक्त और विकसित मध्यप्रदेश का निर्माण है।" 
                   : "To build a healthy, empowered and developed Madhya Pradesh."}
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 flex-1">
+            <div className="flex flex-col gap-3 flex-1 w-full">
                {[
                  isHi ? "हर घर शुद्ध पेयजल" : "Pure water for every home",
                  isHi ? "जल संरचनाओं का सुदृढ़ीकरण" : "Strengthening water structures",
                  isHi ? "ग्रामीण एवं शहरी जनस्वास्थ्य में सुधार" : "Improving rural & urban health"
                ].map((text, idx) => (
-                 <div key={idx} className="bg-white/10 backdrop-blur-md px-5 py-2 rounded-xl border border-white/10 flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary" />
-                    <span className="text-sm font-bold uppercase tracking-wide">{text}</span>
+                 <div key={idx} className="bg-white/10 backdrop-blur-md px-4 md:px-6 py-3 rounded-xl border border-white/10 flex items-center gap-3 transition-transform hover:translate-x-2 duration-300">
+                    <div className="w-2 h-2 rounded-full bg-[#E46B2E] shrink-0" />
+                    <span className="text-xs md:text-sm font-bold uppercase tracking-wide leading-tight">{text}</span>
                  </div>
                ))}
             </div>

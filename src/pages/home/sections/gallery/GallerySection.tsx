@@ -51,7 +51,7 @@ const GallerySection = () => {
       {/* Main Container - Full Width logic */}
       <div className="mx-auto w-full  md:px-12 lg:px-7">
          <SectionHeading 
-              subtitle={isHi ? "विजुअल आर्काइव" : "Visual Archive"} 
+          
               title={isHi ? "जनसेवा की झलकियां" : "Moments of Service"} 
             />
         {/* Full Width Heading Section */}

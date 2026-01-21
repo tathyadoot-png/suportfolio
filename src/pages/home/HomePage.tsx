@@ -11,6 +11,7 @@ import ContactSection from "./sections/contact/ContactSection";
 import AudioVideoSection from "./sections/AudioVideo/AudioVideoSection";
 import GovernanceSection from "./sections/Governance/GovernanceSection";
 import JalJeevanSection from "./sections/jalJeevan/JalJeevanSection";
+import ArticleSection from "./sections/article/ArticleSection";
 // import HeroSection from "./sections/hero/HeroSection";
 
 const HomePage = () => {
@@ -41,6 +42,9 @@ const HomePage = () => {
 </section>
 <section id="leadership">
   {/* <LeadershipSection lang={lang} /> */}
+</section>
+<section id="vichar">
+  <ArticleSection />
 </section>
 
 <section id="media">

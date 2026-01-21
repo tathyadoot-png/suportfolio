@@ -35,12 +35,12 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
           >
             <img 
               src={images[currentIndex]} 
-              className="w-full h-full object-cover object-top brightness-[0.7]" 
+              className="w-full h-full object-cover object-top brightness-[0.9]" 
               alt="Sampatiya Uikey"
             />
             {/* Smooth Blending Overlays */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#021411] via-transparent to-transparent lg:bg-gradient-to-l lg:from-[#021411] lg:via-transparent" />
-            <div className="absolute inset-0 bg-[#021411]/20 mix-blend-multiply" />
+            {/* <div className="absolute inset-0 bg-gradient-to-t from-[#021411] via-transparent to-transparent lg:bg-gradient-to-l lg:from-[#021411] lg:via-transparent" />
+            <div className="absolute inset-0 bg-[#021411]/20 mix-blend-multiply" /> */}
           </motion.div>
         </AnimatePresence>
 
@@ -56,7 +56,7 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
       </div>
 
       {/* 2. LEFT SIDE: CONTENT AREA (Bottom on Mobile, 55% Width on Desktop) */}
-      <div className="relative w-full lg:w-[55%] flex flex-col justify-center px-6 sm:px-10 md:px-12 lg:px-24 py-12 pt-48  lg:py-20 z-20">
+      <div className="relative w-full lg:w-[55%] flex flex-col justify-center px-6 sm:px-10 md:px-12 lg:px-24 py-12 lg:pt-48  lg:py-20 z-20">
         
         {/* Minimalist Badge */}
         <motion.div 
@@ -100,7 +100,9 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
         >
           <div className="pl-4 lg:pl-6 border-l border-primary/30 space-y-3 lg:space-y-4">
             <p className="text-white/90 text-lg sm:text-xl lg:text-2xl font-medium font-gotu leading-normal">
-              {isHi ? "लोक स्वास्थ्य यांत्रिकी मंत्री" : "Minister of Public Health Engineering"}
+            {isHi 
+    ? "लोक स्वास्थ्य यांत्रिकी मंत्री, मध्यप्रदेश शासन | विधायक: मण्डला" 
+    : "Minister of Public Health Engineering, Govt. of MP | MLA: Mandla"}
             </p>
             <p className="text-white/50 text-sm lg:text-lg leading-relaxed font-martel">
               {isHi 
@@ -111,7 +113,7 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
 
           {/* Action Button */}
           <div className="flex items-center gap-6 lg:gap-8 mt-10 lg:mt-12">
-            <button className="group relative flex items-center justify-center h-16 w-16 lg:h-20 lg:w-20 rounded-full border border-white/10 hover:border-primary/50 transition-all duration-500 overflow-hidden shrink-0">
+            <button className="group relative flex items-center justify-center h-12 w-12 lg:h-20 lg:w-20 rounded-full border border-white/10 hover:border-primary/50 transition-all duration-500 overflow-hidden shrink-0">
               <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
               <MoveUpRight size={24} className="relative z-10 text-white lg:size-[28px] group-hover:scale-110 transition-transform" />
             </button>

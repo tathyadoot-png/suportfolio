@@ -20,7 +20,7 @@ const JourneySection = ({ lang }: JourneySectionProps) => {
   const isHi = lang === "hi";
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const journeyData = [
+   const journeyData = [
     {
       period: "ABVP",
       title: isHi ? "छात्र जीवन से जनसेवा तक" : "From Student Life to Public Service",
@@ -70,112 +70,130 @@ const JourneySection = ({ lang }: JourneySectionProps) => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Modern Scroll reveal for ALL screens (sm + lg)
-      gsap.utils.toArray(".journey-row").forEach((row: any) => {
-        const img = row.querySelector(".journey-img-container");
-        const content = row.querySelector(".journey-content");
+      gsap.to(".bg-float", {
+        y: -50,
+        duration: 3,
+        repeat: -1,
+        yoyo: true,
+        ease: "sine.inOut",
+        stagger: 0.5
+      });
 
-        // High-tech image reveal
+      journeyData.forEach((_, i) => {
+        const row = `.row-${i}`;
+        const img = `.img-${i}`;
+        const content = `.content-${i}`;
+
         gsap.from(img, {
-          scale: 0.8,
+          x: i % 2 === 0 ? -100 : 100,
           opacity: 0,
-          duration: 1.4,
+          scale: 0.9,
+          duration: 1.5,
           ease: "expo.out",
-          scrollTrigger: { trigger: img, start: "top 85%" }
+          scrollTrigger: {
+            trigger: row,
+            start: "top 80%",
+          }
         });
 
-        // Smooth text reveal
         gsap.from(content, {
-          y: 60,
+          y: 80,
           opacity: 0,
+          filter: "blur(10px)",
           duration: 1.2,
-          ease: "power3.out",
-          scrollTrigger: { trigger: content, start: "top 90%" }
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: row,
+            start: "top 75%",
+          }
         });
       });
 
-      // Special line animation for large screens
-      gsap.from(".timeline-path", {
-        strokeDashoffset: 1000,
-        scrollTrigger: {
-          trigger: ".journey-container",
-          start: "top 20%",
-          end: "bottom center",
-          scrub: 2
+      gsap.fromTo(".timeline-path", 
+        { strokeDashoffset: 1000 },
+        { 
+          strokeDashoffset: 0,
+          scrollTrigger: {
+            trigger: ".journey-container",
+            start: "top center",
+            end: "bottom center",
+            scrub: 1
+          }
         }
-      });
+      );
     }, containerRef);
     return () => ctx.revert();
-  }, []);
+  }, [journeyData]);
 
   return (
-    <section ref={containerRef} className="py-24 bg-white relative overflow-hidden">
-      {/* Desktop Curved Path - Restored & Animated */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none opacity-20 hidden lg:block">
-        <svg width="100%" height="100%" viewBox="0 0 1000 2000" fill="none" preserveAspectRatio="none">
-          <path 
-            className="timeline-path"
-            d="M500,0 C800,400 200,800 500,1200 C800,1600 200,2000 500,2400" 
-            stroke="#E46B2E" 
-            strokeWidth="2" 
-            strokeDasharray="15 15" 
-          />
-        </svg>
+    <section ref={containerRef} className="py-12 md:py-20 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="bg-float absolute top-1/4 left-[5%] w-48 h-48 md:w-64 md:h-64 bg-[#E46B2E]/5 rounded-full blur-[80px] md:blur-[100px]" />
+        <div className="bg-float absolute bottom-1/4 right-[5%] w-64 h-64 md:w-96 md:h-96 bg-[#12574c]/5 rounded-full blur-[100px] md:blur-[120px]" />
       </div>
 
-      <div className="container relative z-10 px-4 max-w-[1400px] mx-auto">
+      <div className="relative z-10 px-4 md:px-28 mx-auto">
         <SectionHeading title={isHi ? "विकास यात्रा" : "The Journey of Progress"} />
 
-        <div className="journey-container mt-32 relative space-y-32 md:space-y-48">
-          {journeyData.map((item, index) => (
-            <div 
-              key={index} 
-              className={`journey-row flex flex-col lg:flex-row items-center gap-12 lg:gap-24 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
-            >
-              {/* Image Block */}
-              <div className="journey-img-container w-full lg:w-1/2 relative">
-                <div className="relative z-10 rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden shadow-2xl aspect-[4/5] lg:aspect-[16/11]">
-                  <img 
-                    src={item.img} 
-                    className="w-full h-full object-cover scale-100 hover:scale-105 transition-transform duration-700" 
-                    alt={item.title} 
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
+        <div className="journey-container mt-12 lg:mt-32 relative">
+          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] -translate-x-1/2 hidden lg:block">
+            <svg width="100%" height="100%" className="overflow-visible">
+              <path 
+                className="timeline-path"
+                d="M 1,0 L 1,2500" 
+                stroke="#e46b2e" 
+                strokeWidth="2" 
+                strokeDasharray="10 10" 
+                fill="none"
+              />
+            </svg>
+          </div>
+
+          <div className="space-y-16 md:space-y-32 lg:space-y-40">
+            {journeyData.map((item, index) => (
+              <div 
+                key={index} 
+                className={`journey-row row-${index} flex flex-col lg:flex-row items-center gap-8 md:gap-12 lg:gap-32 ${index % 2 !== 0 ? 'lg:flex-row-reverse' : ''}`}
+              >
+                <div className={`img-${index} w-full lg:w-1/2 relative group px-2 md:px-0`}>
+                  <div className="relative z-10 rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-[0_20px_40px_-15px_rgba(0,0,0,0.2)] md:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.3)] aspect-[16/10]">
+                    <img 
+                      src={item.img} 
+                      className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                      alt={item.title} 
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[#12574c]/40 to-transparent mix-blend-overlay" />
+                  </div>
+                  
+                  <div 
+                    className={`absolute -top-4 md:-top-6 ${index % 2 !== 0 ? 'right-4 md:right-6' : 'left-4 md:left-6'} z-20 px-4 md:px-6 py-1.5 md:py-2 rounded-full backdrop-blur-xl bg-white/90 border border-white/20 shadow-lg md:shadow-xl`}
+                  >
+                    <span className="text-[10px] md:text-sm font-black tracking-widest uppercase" style={{ color: item.accent }}>
+                      {item.period}
+                    </span>
+                  </div>
                 </div>
-                {/* Period Badge */}
-                <div 
-                  className={`absolute -bottom-6 ${index % 2 !== 0 ? 'lg:-left-10' : 'lg:-right-10'} left-1/2 -translate-x-1/2 lg:translate-x-0 z-20 px-8 py-4 lg:px-10 lg:py-5 rounded-2xl shadow-xl text-white font-black text-lg lg:text-xl tracking-widest`}
-                  style={{ backgroundColor: item.accent }}
-                >
-                  {item.period}
+
+                <div className={`content-${index} w-full lg:w-1/2 space-y-4 md:space-y-6 px-2 md:px-0 ${index % 2 !== 0 ? 'lg:text-right' : 'text-left'}`}>
+                  <div className={`flex items-center gap-3 md:gap-4 ${index % 2 !== 0 ? 'lg:justify-end' : 'justify-start'}`}>
+                    <span className="h-[2px] w-8 md:w-12 rounded-full" style={{ backgroundColor: item.accent }} />
+                    <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.5em] text-gray-400">Step 0{index + 1}</span>
+                  </div>
+
+                  <h3 className="text-2xl md:text-4xl lg:text-5xl font-black text-[#12574c] leading-tight tracking-tight">
+                    {item.title}
+                  </h3>
+
+                  <div className="relative">
+                    <p className="text-sm md:text-lg lg:text-xl text-gray-600  leading-relaxed font-light text-justify">
+                      {item.desc}
+                    </p>
+                    <div className={`h-1 w-12 md:w-20 mt-4 rounded-full opacity-30 ${index % 2 !== 0 ? 'lg:ml-auto' : 'mr-auto'}`} style={{ backgroundColor: item.accent }} />
+                  </div>
                 </div>
               </div>
-
-              {/* Content Block - 100% Original Content */}
-              <div className={`journey-content w-full lg:w-1/2 ${index % 2 !== 0 ? 'lg:text-right' : 'text-left'}`}>
-                <div className={`flex items-center gap-4 mb-6 ${index % 2 !== 0 ? 'lg:justify-end' : 'justify-start'}`}>
-                  <div className="w-16 h-1 rounded-full" style={{ backgroundColor: item.accent }} />
-                  <span className="text-xs font-black uppercase tracking-[0.4em] text-gray-400">Section 0{index + 1}</span>
-                </div>
-
-                <h3 className="text-3xl md:text-5xl font-gotu font-bold text-gray-900 mb-8 leading-tight">
-                  {item.title}
-                </h3>
-
-                <div 
-                  className={`relative p-8 md:p-10 rounded-[2rem] lg:rounded-[2.5rem] bg-white shadow-[0_20px_50px_rgba(0,0,0,0.05)] border-l-8 lg:border-r-8 border-transparent transition-all duration-500 hover:shadow-2xl`}
-                  style={{ 
-                    borderLeftColor: (index % 2 === 0 || window.innerWidth < 1024) ? item.accent : 'transparent', 
-                    borderRightColor: (index % 2 !== 0 && window.innerWidth >= 1024) ? item.accent : 'transparent' 
-                  }}
-                >
-                  <p className="font-martel text-base md:text-xl text-gray-600 leading-relaxed italic">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
