@@ -57,7 +57,7 @@ const MainLayout = () => {
     visible: { 
       y: 0, 
       opacity: 1,
-      transition: { duration: 1.2, ease: [0.22, 1, 0.36, 1] }
+      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
     }
   };
 
@@ -97,7 +97,7 @@ const MainLayout = () => {
     variants={textRevealVars}
     initial="hidden"
     animate="visible"
-    className="text-white text-[10vw] sm:text-[8vw] md:text-[6vw] font-gotu font-black flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-center leading-none"
+    className="text-white text-[10vw] sm:text-[8vw] md:text-[6vw] font-gotu md:py-6 font-black flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-center leading-none"
   >
     <span>{firstName.join("")}</span>
     <span className="text-[#E46B2E] font-light">{lastName.join("")}</span>
@@ -109,7 +109,7 @@ const MainLayout = () => {
                 <motion.div 
                   initial={{ x: "-100%" }}
                   animate={{ x: "0%" }}
-                  transition={{ duration: 1.5, ease: "easeInOut" }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
                   className="w-full h-full bg-gradient-to-r from-transparent via-white/40 to-transparent"
                 />
               </div>

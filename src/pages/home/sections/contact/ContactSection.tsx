@@ -70,7 +70,7 @@ const ContactSection = () => {
                   <Mail size={20} />
                 </div>
                 <span className="font-bold text-xs md:text-sm text-secondary break-all">
-                  officeofrajendrashukla@gmail.com
+                sampatiyauikey@gmail.com
                 </span>
               </div>
             </div>

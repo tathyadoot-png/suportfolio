@@ -177,7 +177,7 @@ const JourneySection = ({ lang }: JourneySectionProps) => {
                 <div className={`content-${index} w-full lg:w-1/2 space-y-4 md:space-y-6 px-2 md:px-0 ${index % 2 !== 0 ? 'lg:text-right' : 'text-left'}`}>
                   <div className={`flex items-center gap-3 md:gap-4 ${index % 2 !== 0 ? 'lg:justify-end' : 'justify-start'}`}>
                     <span className="h-[2px] w-8 md:w-12 rounded-full" style={{ backgroundColor: item.accent }} />
-                    <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.5em] text-gray-400">Step 0{index + 1}</span>
+                    {/* <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.5em] text-gray-400">Step 0{index + 1}</span> */}
                   </div>
 
                   <h3 className="text-2xl md:text-4xl lg:text-5xl font-black text-[#12574c] leading-tight tracking-tight">
