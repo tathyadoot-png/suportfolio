@@ -120,7 +120,7 @@ const StickySocial = () => {
     },
     { 
       icon: Twitter, 
-      href: "https://x.com/sampatiyauikey", 
+      href: "https://x.com/SampatiyaUikey", 
       color: "#12574c", 
       hoverColor: "#000000", 
       bg: "bg-[#12574c]/5", 
@@ -128,7 +128,7 @@ const StickySocial = () => {
     },
     { 
       icon: Youtube, 
-      href: "https://www.youtube.com/@SampatiyaUikey", 
+      href: "https://www.youtube.com/@sampatiyauikeyofficial", 
       color: "#12574c", 
       hoverColor: "#FF0000", 
       bg: "bg-[#12574c]/5", 
@@ -176,7 +176,7 @@ const StickySocial = () => {
             />
 
             {/* Tooltip Styling Updated */}
-            <div className="hidden md:block absolute right-full mr-5 px-4 py-2 rounded-xl bg-[#12574c] text-white text-[10px] font-black uppercase tracking-[0.2em] opacity-0 group-hover:opacity-100 pointer-events-none transition-all translate-x-4 group-hover:translate-x-0 whitespace-nowrap shadow-xl">
+            <div className="hidden md:block absolute right-full mr-5 px-4 py-2 rounded-xl bg-[#12574c] text-white text-[10px] font-black uppercase  opacity-0 group-hover:opacity-100 pointer-events-none transition-all translate-x-4 group-hover:translate-x-0 whitespace-nowrap shadow-xl">
                 Social Connect
                 <div className="absolute top-1/2 -right-1 -translate-y-1/2 w-2 h-2 bg-[#12574c] rotate-45" />
             </div>

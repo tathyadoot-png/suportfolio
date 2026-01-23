@@ -107,7 +107,7 @@ const AboutSection = ({ lang }: { lang: "hi" | "en" }) => {
   {/* Badge Section */}
   <div className="inline-flex items-center gap-2 sm:gap-3 bg-[#12574c]/5 px-4 sm:px-5 py-2 rounded-full border border-[#12574c]/10">
     <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#E46B2E] animate-pulse shadow-[0_0_8px_rgba(228,107,46,0.8)]" />
-    <h2 className="text-[#12574c] font-black uppercase tracking-[0.15em] sm:tracking-[0.25em] text-[9px] sm:text-xs">
+    <h2 className="text-[#12574c] font-black uppercase  text-[9px] sm:text-xs">
       {isHi ? "जननेत्री का परिचय" : "The Leader's Vision"}
     </h2>
   </div>
@@ -157,7 +157,7 @@ const AboutSection = ({ lang }: { lang: "hi" | "en" }) => {
         <div key={idx} className="relative pl-5 sm:pl-6 border-l-2 border-[#E46B2E]/20 hover:border-[#E46B2E] transition-all duration-300">
           <div className="flex items-center gap-2 mb-1 sm:mb-2">
             <span className="shrink-0 scale-90 sm:scale-100">{detail.icon}</span>
-            <span className="text-[#E46B2E]/60 text-[9px] sm:text-[10px] uppercase font-black tracking-widest">{detail.label}</span>
+            <span className="text-[#E46B2E]/60 text-[9px] sm:text-[10px] uppercase font-black">{detail.label}</span>
           </div>
           <p className="text-[#12574c] font-bold text-base sm:text-lg leading-snug">
             {detail.value}
@@ -186,7 +186,7 @@ const AboutSection = ({ lang }: { lang: "hi" | "en" }) => {
         <p className="text-white text-lg sm:text-xl md:text-2xl font-bold">
           {isHi ? "एम.ए. – हिन्दी" : "M.A. – Hindi"}
         </p>
-        <p className="text-[#E46B2E] text-[9px] sm:text-[10px] uppercase font-black tracking-[0.2em] sm:tracking-[0.3em] mt-1 sm:mt-2">
+        <p className="text-[#E46B2E] text-[9px] sm:text-[10px] uppercase font-black mt-1 sm:mt-2">
           Post Graduate (स्नातकोत्तर)
         </p>
       </div>

@@ -68,7 +68,7 @@ const AchievementsSection = ({ lang }: AchievementsSectionProps) => {
       {/* Heading - Edge to Edge Full Width */}
       <div className="w-full  lg:px-3 mb-12">
         <SectionHeading
-          subtitle={isHi ? "प्रदेश को राष्ट्रीय पहचान दिलाने वाले कार्य" : "Milestones that Gave National Recognition"}
+       
           title={isHi ? "विशेष उपलब्धियाँ" : "Landmark Achievements"}
         />
       </div>
@@ -107,7 +107,7 @@ const AchievementsSection = ({ lang }: AchievementsSectionProps) => {
               <div className="w-full md:w-6/12 space-y-6 md:space-y-8">
                 <div className="space-y-3">
                   <div className="flex items-center gap-4">
-                    <span className="text-[10px] md:text-[11px] font-black tracking-[0.4em] text-primary uppercase">
+                    <span className="text-[10px] md:text-[11px] font-black text-primary uppercase">
                       {item.tag}
                     </span>
                     <div className="h-[1px] w-12 md:w-20 bg-primary/20" />

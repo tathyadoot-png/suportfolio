@@ -44,7 +44,7 @@ const HomePage = () => {
   {/* <LeadershipSection lang={lang} /> */}
 </section>
 <section id="vichar">
-  <ArticleSection />
+  <ArticleSection lang={lang} />
 </section>
 
 <section id="media">

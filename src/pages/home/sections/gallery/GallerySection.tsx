@@ -95,7 +95,7 @@ const GallerySection = () => {
               <div className="sticky top-0 w-full p-4 md:p-6 md:px-12 flex justify-between items-center bg-white/95 backdrop-blur-md z-50 border-b border-gray-100">
                 <div className="flex items-center gap-3 md:gap-4">
                   <Camera className="text-primary w-5 h-5 md:w-6 md:h-6" />
-                  <h4 className="font-black uppercase text-lg md:text-2xl tracking-tighter">
+                  <h4 className="font-black uppercase text-lg md:text-2xl ">
                     {isHi ? selectedCat.titleHi : selectedCat.titleEn}
                   </h4>
                 </div>
@@ -157,7 +157,7 @@ const GallerySection = () => {
                     />
                   </AnimatePresence>
                   
-                  <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-white/40 font-mono tracking-widest text-[10px] md:text-xs">
+                  <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-white/40 font-mono text-[10px] md:text-xs">
                     {imgIndex + 1} / {selectedCat.images.length}
                   </div>
                 </div>

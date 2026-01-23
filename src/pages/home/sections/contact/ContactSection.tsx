@@ -77,7 +77,7 @@ const ContactSection = () => {
 
             <div className="flex items-center gap-3 py-2 px-4 bg-green/5 border border-green/10 rounded-full w-fit">
               <CheckCircle2 size={14} className="text-green" />
-              <span className="text-[12px] md:text-[14px] font-bold text-green uppercase tracking-wider">
+              <span className="text-[12px] md:text-[14px] font-bold text-green uppercase">
                 {isHi ? "हमसे जुड़ें" : "Connect With Us"}
               </span>
             </div>
@@ -85,7 +85,7 @@ const ContactSection = () => {
             <div className="flex gap-4">
               {[
                 { Icon: Facebook, link: "https://www.facebook.com/OfficeOfRShukla" },
-                { Icon: Twitter, link: "https://x.com/OfficeOfRShukla" },
+                { Icon: Twitter, link: "https://x.com/OfficeOfS_Uikey" },
                 { Icon: Instagram, link: "https://www.instagram.com/officeofrshukla/" },
               ].map(({ Icon, link }, i) => (
                 <a
@@ -117,7 +117,7 @@ const ContactSection = () => {
                   { id: 'city', label: labels.city, type: 'text', name: 'city' },
                 ].map((input) => (
                   <div key={input.id} className="space-y-1.5">
-                    <label className="text-[12px] md:text-[14px] font-bold text-secondary/40 uppercase ml-1 tracking-widest">
+                    <label className="text-[12px] md:text-[14px] font-bold text-secondary/40 uppercase ml-1 ">
                       {input.label}
                     </label>
                     <input 
@@ -131,7 +131,7 @@ const ContactSection = () => {
                 ))}
 
                 <div className="md:col-span-2 space-y-1.5">
-                  <label className="text-[12px] md:text-[14px] font-bold text-secondary/40 uppercase ml-1 tracking-widest">
+                  <label className="text-[12px] md:text-[14px] font-bold text-secondary/40 uppercase ml-1 ">
                     {labels.msg}
                   </label>
                   <textarea 
@@ -144,7 +144,7 @@ const ContactSection = () => {
 
                 <button 
                   type="submit" 
-                  className="md:col-span-2 bg-secondary py-3.5 md:py-4 rounded-xl text-white font-black text-xs md:text-sm uppercase tracking-[0.15em] md:tracking-[0.2em] flex items-center justify-center gap-3 hover:bg-primary transition-all shadow-lg active:scale-[0.98]"
+                  className="md:col-span-2 bg-secondary py-3.5 md:py-4 rounded-xl text-white font-black text-xs md:text-sm uppercase  flex items-center justify-center gap-3 hover:bg-primary transition-all shadow-lg active:scale-[0.98]"
                 >
                   {labels.btn} <Send size={16} />
                 </button>

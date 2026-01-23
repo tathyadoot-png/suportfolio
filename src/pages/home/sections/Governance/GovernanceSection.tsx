@@ -154,7 +154,7 @@ const GovernanceSection = ({ lang }: GovernanceSectionProps) => {
                ].map((text, idx) => (
                  <div key={idx} className="bg-white/10 backdrop-blur-md px-4 md:px-6 py-3 rounded-xl border border-white/10 flex items-center gap-3 transition-transform hover:translate-x-2 duration-300">
                     <div className="w-2 h-2 rounded-full bg-[#E46B2E] shrink-0" />
-                    <span className="text-xs md:text-sm font-bold uppercase tracking-wide leading-tight">{text}</span>
+                    <span className="text-xs md:text-sm font-bold uppercase  leading-tight">{text}</span>
                  </div>
                ))}
             </div>

@@ -28,7 +28,7 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
             <div className="space-y-4 md:space-y-6">
               <div className="flex items-center gap-3">
                 <div className="h-[2px] w-8 md:w-12 bg-primary" />
-                <span className="text-[10px] md:text-xs font-black uppercase tracking-[0.2em] md:tracking-[0.3em] text-green">
+                <span className="text-[10px] md:text-xs font-black uppercase  text-green">
                   {isHi ? "शुद्ध जल – स्वस्थ जीवन – सशक्त मध्यप्रदेश" : "Pure Water – Healthy Life – Empowered MP"}
                 </span>
               </div>
@@ -93,7 +93,7 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
                     ? "“स्वच्छ पेयजल केवल सुविधा नहीं, बल्कि जनस्वास्थ्य की आधारशिला है।”" 
                     : "“Clean water is the foundation of public health.”"}
                 </p>
-                <span className="block mt-4 text-[10px] md:text-xs font-bold uppercase tracking-widest opacity-70">— Smt. Sampatiya Uikey</span>
+                <span className="block mt-4 text-[10px] md:text-xs font-bold uppercase  opacity-70">— Smt. Sampatiya Uikey</span>
               </div>
             </div>
           </div>
@@ -130,7 +130,7 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
                 </div>
                 <div>
                   <h4 className="text-lg md:text-xl font-gotu font-bold leading-tight">{isHi ? "लक्ष्य: जल-सुरक्षित मध्यप्रदेश" : "Goal: Water-Secure MP"}</h4>
-                  <p className="text-[9px] md:text-xs opacity-60 uppercase tracking-widest font-bold">The Ultimate Vision</p>
+                  <p className="text-[9px] md:text-xs opacity-60 uppercase  font-bold">The Ultimate Vision</p>
                 </div>
               </div>
               <p className="font-martel text-sm md:text-lg leading-relaxed opacity-90 text-left">
@@ -142,7 +142,7 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
               {/* Equality Tags */}
               <div className="flex flex-wrap gap-2 pt-2">
                 {(isHi ? ["समानता", "स्वास्थ्य", "महिला सम्मान", "ग्रामीण सशक्तिकरण"] : ["Equality", "Health", "Women Respect", "Rural Empowerment"]).map((tag, i) => (
-                  <span key={i} className="px-2 md:px-3 py-1 md:py-1.5 bg-white/10 border border-white/10 rounded-lg md:rounded-xl text-[9px] md:text-[10px] font-black uppercase tracking-tighter">
+                  <span key={i} className="px-2 md:px-3 py-1 md:py-1.5 bg-white/10 border border-white/10 rounded-lg md:rounded-xl text-[9px] md:text-[10px] font-black uppercase ">
                     {tag}
                   </span>
                 ))}

@@ -169,7 +169,7 @@ const JourneySection = ({ lang }: JourneySectionProps) => {
                   <div 
                     className={`absolute -top-4 md:-top-6 ${index % 2 !== 0 ? 'right-4 md:right-6' : 'left-4 md:left-6'} z-20 px-4 md:px-6 py-1.5 md:py-2 rounded-full backdrop-blur-xl bg-white/90 border border-white/20 shadow-lg md:shadow-xl`}
                   >
-                    <span className="text-[10px] md:text-sm font-black tracking-widest uppercase" style={{ color: item.accent }}>
+                    <span className="text-[10px] md:text-sm font-black uppercase" style={{ color: item.accent }}>
                       {item.period}
                     </span>
                   </div>
@@ -178,10 +178,9 @@ const JourneySection = ({ lang }: JourneySectionProps) => {
                 <div className={`content-${index} w-full lg:w-1/2 space-y-4 md:space-y-6 px-2 md:px-0 ${index % 2 !== 0 ? 'lg:text-right' : 'text-left'}`}>
                   <div className={`flex items-center gap-3 md:gap-4 ${index % 2 !== 0 ? 'lg:justify-end' : 'justify-start'}`}>
                     <span className="h-[2px] w-8 md:w-12 rounded-full" style={{ backgroundColor: item.accent }} />
-                    {/* <span className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.3em] md:tracking-[0.5em] text-gray-400">Step 0{index + 1}</span> */}
                   </div>
 
-                  <h3 className="text-2xl md:text-4xl lg:text-5xl font-black text-[#12574c] leading-tight tracking-tight">
+                  <h3 className="text-2xl md:text-4xl lg:text-5xl font-black text-[#12574c] leading-tight ">
                     {item.title}
                   </h3>
 

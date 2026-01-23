@@ -3,14 +3,18 @@ import { useState, useEffect } from "react";
 import { MoveUpRight, Zap } from "lucide-react";
 
 // Images
-import slid1 from "@/assets/img18.jpg";
-import slid2 from "@/assets/slid2.jpeg";
-import slid3 from "@/assets/slid3.jpeg";
-import slid5 from "@/assets/slid5.jpeg";
+import slid1 from "@/assets/img21_copy.jpg";
+import slid2 from "@/assets/img20.jpg";
+import slid3 from "@/assets/img22.jpg";
+import slid4 from "@/assets/slid2.jpeg";
+import slid8 from "@/assets/img31.jpg";
+import slid5 from "@/assets/img19.jpg";
+import slid6 from "@/assets/slid3.jpeg";
+import slid7 from "@/assets/slid5.jpeg";
 
 const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
   const isHi = lang === "hi";
-  const images = [slid1, slid2, slid3, slid5];
+  const images = [slid1, slid2, slid3, slid5, slid8, slid6, slid7];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {

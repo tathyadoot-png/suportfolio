@@ -123,7 +123,7 @@ const Navbar = ({ lang, setLang }: { lang: "hi" | "en", setLang: (l: "hi" | "en"
                       className="group flex items-center justify-between py-4 md:py-5 border-b border-white/5 active:bg-white/5 transition-colors"
                     >
                       {/* Changed text-3xl to responsive text-xl sm:text-2xl md:text-3xl */}
-                      <span className="text-md md:text-2xl font-gotu font-black text-white group-hover:text-[#E46B2E] transition-colors tracking-tight">
+                      <span className="text-md md:text-2xl font-gotu font-black text-white group-hover:text-[#E46B2E] transition-colors ">
                         {item.label}
                       </span>
                       <ArrowUpRight size={20} className="text-white/20 group-hover:text-[#E46B2E] md:w-6 md:h-6" />
@@ -137,8 +137,8 @@ const Navbar = ({ lang, setLang }: { lang: "hi" | "en", setLang: (l: "hi" | "en"
                     onClick={() => { setLang(lang === 'hi' ? 'en' : 'hi'); setIsOpen(false) }}
                     className="w-full flex flex-col items-start p-4 rounded-2xl bg-white/5 border border-white/10 text-white hover:bg-white/10 transition-all"
                   >
-                    <span className="text-[9px] md:text-[10px] text-white/40 font-black uppercase mb-1 tracking-widest">Language / भाषा</span>
-                    <span className="font-black text-sm md:text-lg tracking-wider">{lang === 'hi' ? 'ENGLISH' : 'हिन्दी'}</span>
+                    <span className="text-[9px] md:text-[10px] text-white/40 font-black uppercase mb-1 ">Language / भाषा</span>
+                    <span className="font-black text-sm md:text-lg ">{lang === 'hi' ? 'ENGLISH' : 'हिन्दी'}</span>
                   </button>
                 </div>
               </div>
