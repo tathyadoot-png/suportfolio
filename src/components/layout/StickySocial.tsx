@@ -104,7 +104,7 @@ const StickySocial = () => {
   const socials = [
     { 
       icon: Facebook, 
-      href: "https://www.facebook.com/SampatiyaUikeyBJP", 
+      href: "https://www.facebook.com/SampatiyaUikeyOfficial", 
       color: "#12574c", // Primary Theme Color
       hoverColor: "#1877F2", 
       bg: "bg-[#12574c]/5", 
@@ -112,7 +112,7 @@ const StickySocial = () => {
     },
     { 
       icon: Instagram, 
-      href: "https://www.instagram.com/sampatiyauikey/", 
+      href: "https://www.instagram.com/sampatiyauikey/?hl=en", 
       color: "#12574c", 
       hoverColor: "#E4405F", 
       bg: "bg-[#12574c]/5", 
@@ -139,7 +139,7 @@ const StickySocial = () => {
   return (
     <div className="fixed z-[999] 
       bottom-20 right-2 
-      md:right-3 md:top-1/2 md:-translate-y-1/2 md:bottom-auto"
+      md:right-3 md:top-[70%] md:-translate-y-1/2 md:bottom-auto"
     >
       <div className="bg-white/60 backdrop-blur-2xl border border-white/40 
         p-1.5 md:p-3 rounded-[2.5rem] 

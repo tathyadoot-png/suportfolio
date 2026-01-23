@@ -47,7 +47,7 @@ const ContactSection = () => {
         
         {/* Heading Section */}
         <div className="mb-10 md:mb-16">
-          <SectionHeading subtitle={labels.subtitle} title={labels.title} />
+          <SectionHeading  title={labels.title} />
         </div>
 
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">

@@ -5,10 +5,11 @@ import type { Lang } from "@/layouts/MainLayout";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 
 // Images
-import img12 from "@/assets/12.jpg";
+import img12 from "@/assets/img7.jpg";
 import img13 from "@/assets/13.jpeg";
-import img14 from "@/assets/14.jpg";
-import img15 from "@/assets/15.jpg";
+import img14 from "@/assets/img15.jpg";
+import img15 from "@/assets/img16.jpg";
+import img17 from "@/assets/img17.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,7 +64,7 @@ const JourneySection = ({ lang }: JourneySectionProps) => {
       desc: isHi 
         ? "तीन लगातार कार्यकाल। 2015 में निर्विरोध निर्वाचन – जनविश्वास का सशक्त प्रमाण। ग्रामीण विकास, महिला सशक्तिकरण, health, शिक्षा और आजीविका पर विशेष फोकस।" 
         : "Three consecutive terms. Her unopposed election in 2015 is a powerful testament to public trust. A special focus remained on rural development, women empowerment, health, and education.",
-      img: img15,
+      img: img17,
       accent: "#E46B2E",
     }
   ];

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import type { Lang } from "@/layouts/MainLayout";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 import { Droplets, CheckCircle2, ShieldCheck, Sun, Activity, Users, Target, Heart } from "lucide-react";
-import img3 from "@/assets/img3.jpeg";
+import img3 from "@/assets/img13.jpg";
 
 interface JalJeevanSectionProps {
   lang: Lang;
