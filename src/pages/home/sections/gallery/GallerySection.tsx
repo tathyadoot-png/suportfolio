@@ -32,7 +32,7 @@ const GallerySection = () => {
     <>
       <div className="pt-20">
         <SectionHeading 
-          title={isHi ? "जनसेवा की झलकियां" : "Moments of Service"} 
+          title={isHi ? "जनसेवा की स्मृतियाँ" : "Moments of Service"} 
         />
       </div>
 
