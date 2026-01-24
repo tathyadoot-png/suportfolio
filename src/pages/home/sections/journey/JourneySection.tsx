@@ -159,7 +159,7 @@ const JourneySection = ({ lang }: JourneySectionProps) => {
             <svg width="100%" height="100%" className="overflow-visible">
               <path 
                 className="timeline-path"
-                d="M 1,0 L 1,2500" 
+                d="M 1,0 L 1,4500" 
                 stroke="#e46b2e" 
                 strokeWidth="2" 
                 strokeDasharray="10 10" 
