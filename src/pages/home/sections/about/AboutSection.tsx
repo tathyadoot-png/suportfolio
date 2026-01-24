@@ -114,7 +114,7 @@ const AboutSection = ({ lang }: { lang: "hi" | "en" }) => {
   
   {/* Main Heading */}
   <h3 className="text-[#12574c] text-3xl sm:text-4xl lg:text-6xl font-black  ">
-    {isHi ? "सेवा और संकल्प की प्रतीक" : "Symbol of Service & Resolve"}
+    {isHi ? "सेवा ही संकल्प" : "service is determination"}
   </h3>
 
   {/* Description Text */}
@@ -122,15 +122,15 @@ const AboutSection = ({ lang }: { lang: "hi" | "en" }) => {
     {/* Highlighted Paragraph */}
     <p className="border-l-[3px] md:border-l-4 border-[#E46B2E]/30 pl-4 md:pl-6 italic bg-gradient-to-r from-[#E46B2E]/5 to-transparent py-3 md:py-4 rounded-r-2xl">
       {isHi 
-        ? "श्रीमती संपतिया उइके जी मध्यप्रदेश की ऐसी जननेत्री हैं, जिनका संपूर्ण सार्वजनिक जीवन सेवा, समर्पण और संघर्ष का जीवंत उदाहरण है।"
-        : "Smt. Sampatiya Uikey is a prominent leader whose public life is a living testament to service, dedication, and struggle."}
+        ? "श्रीमती संपतिया उइके जी का जन्म 04 सितम्बर 1967 को ग्राम सुर्खी, जिला मण्डला, मध्यप्रदेश में हुआ। जमीनी स्तर से सार्वजनिक जीवन की शुरुआत कर उन्होंने सेवा, समर्पण और संघर्ष को अपना मूल मंत्र बनाया।"
+        : "Mrs. Sampatiya Uikey was born on September 4, 1967, in Surkhi village, Mandla district, Madhya Pradesh. Beginning her public life from the grassroots, she embraced service, dedication, and struggle as her core values."}
     </p>
 
     {/* Standard Paragraph */}
     <p className="pl-1 md:pl-2 text-sm sm:text-base md:text-xl">
       {isHi
-        ? "जमीनी स्तर से लेकर राज्य मंत्रिमंडल तक का उनका सफर न केवल प्रेरणादायी है, बल्कि लोकतांत्रिक मूल्यों में अटूट विश्वास का प्रतीक भी है। जनजातीय समाज, महिलाओं, ग्रामीण विकास और जनस्वास्थ्य के क्षेत्र में उनका योगदान उन्हें प्रदेश की प्रभावशाली और विश्वसनीय नेतृत्वकर्ता के रूप में स्थापित करता है।"
-        : "Her journey from the grassroots to the State Cabinet is not only inspiring but also a symbol of unwavering faith in democratic values. Her contributions to tribal society, women's empowerment, rural development, and public health establish her as an influential and trusted leader."}
+        ? "जनजातीय समाज, महिलाओं के सशक्तिकरण, ग्रामीण विकास एवं जनस्वास्थ्य के क्षेत्र में उनके सतत प्रयासों के माध्यम से उन्होंने जन-जन का विश्वास अर्जित किया है। जनसेवा के ध्येय के साथ अपने क्षेत्र की समस्याओं के समाधान और समग्र विकास के लिए निरंतर कार्यरत रही हैं। जनता के विश्वास और समर्थन के बल पर वे आज मण्डला विधानसभा क्षेत्र से विधायक हैं तथा वर्तमान में लोक स्वास्थ्य यांत्रिकी मंत्री, मध्यप्रदेश शासन के पद पर कार्यरत हैं। जनसेवा और समावेशी विकास के ध्येय के साथ वे पूर्ण निष्ठा से मध्यप्रदेश के विकास के लिए समर्पित हैं।"
+        : "Through her sustained efforts in the fields of tribal society, women’s empowerment, rural development, and public health, she has earned the trust of the people. With the objective of public service, she has continuously worked toward resolving the problems of her constituency and ensuring its overall development. On the strength of the people’s trust and support, she is today a Member of the Legislative Assembly from the Mandla Assembly constituency and is currently serving as the Minister of Public Health Engineering in the Government of Madhya Pradesh. With the commitment to public service and inclusive development, she is wholeheartedly dedicated to the development of Madhya Pradesh."}
     </p>
   </div>
 </motion.div>
@@ -177,7 +177,7 @@ const AboutSection = ({ lang }: { lang: "hi" | "en" }) => {
         <GraduationCap className="text-[#E46B2E] w-5 h-5 sm:w-6 sm:h-6" />
       </div>
       <h4 className="text-xl sm:text-2xl lg:text-3xl font-black text-white">
-        {isHi ? "शिक्षा एवं बौद्धिक आधार" : "Education & Intellect"}
+        {isHi ? "शिक्षा" : "Education"}
       </h4>
     </div>
 

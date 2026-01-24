@@ -130,14 +130,14 @@ const GovernanceSection = ({ lang }: GovernanceSectionProps) => {
           className="mt-12 md:mt-20 p-6 md:p-10 lg:p-14 rounded-[2rem] md:rounded-[3rem] bg-gradient-to-br from-[#196458] to-[#124d43] text-white relative overflow-hidden shadow-2xl"
         >
           {/* Decorative Pattern - Scaled for mobile */}
-          <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
+          <div className="absolute top-0 right-0 p-1 opacity-10 pointer-events-none">
               <Droplets className="w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40" />
           </div>
 
-          <div className="relative z-10 flex flex-col lg:flex-row gap-8 lg:items-center">
-            <div className="text-center lg:text-left space-y-3 md:space-y-4">
+          <div className="relative z-10 flex flex-col lg:flex-row gap-3 lg:items-center">
+            <div className="text-center lg:text-left space-y-3 md:space-y-2">
               <h4 className="text-xl md:text-2xl lg:text-3xl font-gotu font-bold text-[#E46B2E] italic">
-                {isHi ? "उनका संकल्प—" : "Her Resolution—"}
+                {isHi ? "संकल्प—" : "Resolution—"}
               </h4>
               <p className="font-martel text-sm md:text-lg lg:text-xl opacity-90 max-w-2xl leading-relaxed">
                 {isHi 
@@ -146,15 +146,15 @@ const GovernanceSection = ({ lang }: GovernanceSectionProps) => {
               </p>
             </div>
 
-            <div className="flex flex-col gap-3 flex-1 w-full">
+            <div className="flex flex-col gap-3  flex-1 w-full">
                {[
                  isHi ? "हर घर शुद्ध पेयजल" : "Pure water for every home",
                  isHi ? "जल संरचनाओं का सुदृढ़ीकरण" : "Strengthening water structures",
                  isHi ? "ग्रामीण एवं शहरी जनस्वास्थ्य में सुधार" : "Improving rural & urban health"
                ].map((text, idx) => (
-                 <div key={idx} className="bg-white/10 backdrop-blur-md px-4 md:px-6 py-3 rounded-xl border border-white/10 flex items-center gap-3 transition-transform hover:translate-x-2 duration-300">
+                 <div key={idx} className="bg-white/10 backdrop-blur-md px-4 md:px-6 py-3 rounded-xl border text-xl border-white/10 flex items-center gap-3 transition-transform hover:translate-x-2 duration-300">
                     <div className="w-2 h-2 rounded-full bg-[#E46B2E] shrink-0" />
-                    <span className="text-xs md:text-sm font-bold uppercase  leading-tight">{text}</span>
+                    <span className="text-xs md:text-lg font-bold uppercase  leading-tight">{text}</span>
                  </div>
                ))}
             </div>

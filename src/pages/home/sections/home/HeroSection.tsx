@@ -120,7 +120,10 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
           <div className="flex items-center gap-6 lg:gap-8 mt-10 lg:mt-12">
             <button className="group relative flex items-center justify-center h-12 w-12 lg:h-20 lg:w-20 rounded-full border border-white/10 hover:border-primary/50 transition-all duration-500 overflow-hidden shrink-0">
               <div className="absolute inset-0 bg-primary translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+              <a href="#contact">
+
               <MoveUpRight size={24} className="relative z-10 text-white lg:size-[28px] group-hover:scale-110 transition-transform" />
+              </a>
             </button>
             <div className="flex flex-col">
               <span className="text-white font-black text-[10px] lg:text-xs uppercase ">{isHi ? "संपर्क सूत्र" : "Get In Touch"}</span>

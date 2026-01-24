@@ -33,7 +33,7 @@ const JourneySection = ({ lang }: JourneySectionProps) => {
     },
     {
       period: "RSS",
-      title: isHi ? "राष्ट्रीय स्वयंसेवक संघ से वैचारिक संस्कार" : "Ideological Values from RSS",
+      title: isHi ? "संघ परिवार से वैचारिक संस्कार" : "Ideological Values from RSS",
       desc: isHi 
         ? "लगभग 12 वर्षों तक राष्ट्रीय स्वयंसेवक संघ से सक्रिय जुड़ाव ने उनके व्यक्तित्व को सेवा, समरसता और राष्ट्रनिर्माण के मूल्यों से सुदृढ़ किया। संघ की वैचारिक प्रेरणा उनके प्रत्येक निर्णय और जनकल्याणकारी प्रयासों में स्पष्ट रूप से परिलक्षित होती है।" 
         : "Active association with the RSS for nearly 12 years strengthened her personality with values of service, harmony, and nation-building. This ideological inspiration is clearly reflected in her every decision.",
@@ -53,20 +53,38 @@ const JourneySection = ({ lang }: JourneySectionProps) => {
       period: "1999–2004",
       title: isHi ? "ग्राम पंचायत टिकरवारा की सरपंच" : "Sarpanch, Gram Panchayat Tikarwara",
       desc: isHi 
-        ? "ग्राम विकास, स्वच्छता, शिक्षा और बुनियादी सुविधाओं में उल्लेखनीय कार्य। पंचायत को श्रेष्ठ पंचायत का सम्मान।" 
-        : "Remarkable work in rural development, sanitation, education, and basic amenities. The Panchayat was honored with the 'Best Panchayat' award during her tenure.",
+        ? "सन् 1998 में ग्राम पंचायत टिकरवारा की सरपंच निर्वाचित हुईं। ग्राम विकास, स्वच्छता, शिक्षा और बुनियादी सुविधाओं के क्षेत्र में उल्लेखनीय कार्य किया। उनके इस उल्लखेनीय विकास कार्यों के लिए उनकी पंचायत को श्रेष्ठ पंचायत का सम्मान मिला।" 
+        : "In 1998, she was elected Sarpanch of the Tikarwara Gram Panchayat. She accomplished remarkable work in the areas of village development, sanitation, education, and infrastructure. For her remarkable development work, her Panchayat was awarded the Best Panchayat Award.",
       img: img15,
       accent: "#196458",
     },
     {
       period: "2004–2017",
-      title: isHi ? "जिला पंचायत मण्डला की अध्यक्ष" : "Chairperson, Zila Panchayat Mandla",
+      title: isHi ? "जिला पंचायत अध्यक्ष, मण्डला" : "Chairperson, Zila Panchayat Mandla",
       desc: isHi 
-        ? "तीन लगातार कार्यकाल। 2015 में निर्विरोध निर्वाचन – जनविश्वास का सशक्त प्रमाण। ग्रामीण विकास, महिला सशक्तिकरण, health, शिक्षा और आजीविका पर विशेष फोकस।" 
+        ? "तीन लगातार कार्यकाल। 2015 में निर्विरोध निर्वाचन – जनविश्वास का सशक्त प्रमाण। ग्रामीण विकास, महिला सशक्तिकरण, स्वास्थ्य, शिक्षा और आजीविका पर विशेष फोकस।" 
         : "Three consecutive terms. Her unopposed election in 2015 is a powerful testament to public trust. A special focus remained on rural development, women empowerment, health, and education.",
       img: img17,
       accent: "#E46B2E",
-    }
+    },
+    {
+      period: "2018–2023",
+      title: isHi ? "राज्यसभा सदस्य" : "Rajya Sabha member",
+      desc: isHi 
+        ? "वर्ष 2017 में मध्य प्रदेश से राज्यसभा सांसद के रूप में निर्विरोध निर्वाचित हुईं। राज्यसभा सांसद के रूप में उनका संसदीय योगदान उल्लेखनीय रहा। संसद में उन्होंने जनजातीय विकास, महिला सशक्तिकरण, सामाजिक न्याय और जनस्वास्थ्य जैसे महत्वपूर्ण विषयों को सदन में प्रमुखता से उठाया। वर्ष 2018 में स्वास्थ्य एवं परिवार कल्याण समिति की संसदीय समिति की सदस्य भी रहीं।" 
+        : "Three consecutive terms. Her unopposed election in 2015 is a powerful testament to public trust. A special focus remained on rural development, women empowerment, health, and education.",
+      img: img15,
+      accent: "#E46B2E",
+    },
+    // {
+    //   period: "2018–2023",
+    //   title: isHi ? "राज्यसभा सदस्य" : "Rajya Sabha member",
+    //   desc: isHi 
+    //     ? "वर्ष 2017 में मध्य प्रदेश से राज्यसभा सांसद के रूप में निर्विरोध निर्वाचित हुईं। राज्यसभा सांसद के रूप में उनका संसदीय योगदान उल्लेखनीय रहा। संसद में उन्होंने जनजातीय विकास, महिला सशक्तिकरण, सामाजिक न्याय और जनस्वास्थ्य जैसे महत्वपूर्ण विषयों को सदन में प्रमुखता से उठाया। वर्ष 2018 में स्वास्थ्य एवं परिवार कल्याण समिति की संसदीय समिति की सदस्य भी रहीं।" 
+    //     : "In the year 2017, she was elected unopposed as a Rajya Sabha Member of Parliament from Madhya Pradesh. Her parliamentary contributions as a Rajya Sabha MP were noteworthy. In Parliament, she prominently raised important issues such as tribal development, women’s empowerment, social justice, and public health. In 2018, she also served as a member of the Parliamentary Committee on Health and Family Welfare.",
+    //   img: img15,
+    //   accent: "#E46B2E",
+    // },
   ];
 
   useEffect(() => {

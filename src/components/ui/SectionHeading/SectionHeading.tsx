@@ -23,9 +23,9 @@ const SectionHeading = ({ title }: SectionHeadingProps) => {
           whileInView={{ opacity: 1, letterSpacing: "0.3em" }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="text-[7px] md:text-[10px] font-black uppercase text-[#12574c]"
+          className="text-[7px] md:text-[12px] font-black uppercase text-[#12574c]"
         >
-          Leadership 2026
+         Development Driven by Strong Leadership
         </motion.span>
       </div>
 

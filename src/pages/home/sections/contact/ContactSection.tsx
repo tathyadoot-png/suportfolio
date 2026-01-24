@@ -27,7 +27,7 @@ const ContactSection = () => {
   const labels = {
     title: isHi ? "अपनी बात हम तक पहुँचाएँ" : "Share Your Message With Us",
     subtitle: isHi ? "संपर्क करें" : "Contact Us",
-    desc: isHi ? "विन्ध्य के विकास और आपकी समस्याओं के समाधान के लिए हम सदैव तत्पर हैं।" : "We are always ready for the development of Vindhya and to solve your problems.",
+    desc: isHi ? "मध्य प्रदेश के विकास और आपकी समस्याओं के समाधान के लिए हम सदैव तत्पर हैं।" : "We are always ready for the development of Madhya Pradesh and to solve your problems.",
     name: isHi ? "पूरा नाम" : "Full Name",
     phone: isHi ? "मोबाइल नंबर" : "Mobile Number",
     email: isHi ? "ईमेल पता" : "Email Address",
@@ -84,9 +84,9 @@ const ContactSection = () => {
 
             <div className="flex gap-4">
               {[
-                { Icon: Facebook, link: "https://www.facebook.com/OfficeOfRShukla" },
+                { Icon: Facebook, link: "https://www.facebook.com/OfficeOfSUikey" },
                 { Icon: Twitter, link: "https://x.com/OfficeOfS_Uikey" },
-                { Icon: Instagram, link: "https://www.instagram.com/officeofrshukla/" },
+                { Icon: Instagram, link: "https://www.instagram.com/officeofsuikey" },
               ].map(({ Icon, link }, i) => (
                 <a
                   key={i}
