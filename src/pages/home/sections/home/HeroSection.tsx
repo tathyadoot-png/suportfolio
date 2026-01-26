@@ -109,7 +109,7 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
     ? "लोक स्वास्थ्य यांत्रिकी मंत्री, मध्यप्रदेश शासन | विधायक: मण्डला" 
     : "Minister of Public Health Engineering, Govt. of MP | MLA: Mandla"}
             </p>
-            <p className="text-white/50 text-sm lg:text-lg leading-relaxed font-martel">
+            <p className="text-white/50 text-sm lg:text-lg leading-relaxed font-Poppins">
               {isHi 
                 ? "स्वच्छ जल और सशक्त समाज के निर्माण हेतु समर्पित नेतृत्व।" 
                 : "Dedicated leadership for clean water and an empowered society."}

@@ -119,7 +119,7 @@ const AchievementsSection = ({ lang }: AchievementsSectionProps) => {
                 </div>
 
                 <div className="relative pl-6 md:pl-8 border-l-2 border-primary/20">
-                  <p className="font-martel text-base md:text-xl leading-relaxed text-text-muted/80 text-justify">
+                  <p className="font-Poppins text-base md:text-xl leading-relaxed text-text-muted/80 text-justify">
                     {isHi ? item.descHi : item.descEn}
                   </p>
                 </div>

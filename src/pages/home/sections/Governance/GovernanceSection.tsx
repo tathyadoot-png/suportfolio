@@ -112,7 +112,7 @@ const GovernanceSection = ({ lang }: GovernanceSectionProps) => {
                   {(isHi ? item.contentHi : item.contentEn).map((point, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <CheckCircle2 className="w-4 h-4 mt-1 flex-shrink-0 opacity-40" style={{ color: item.color }} />
-                      <p className="font-martel text-gray-600 text-sm md:text-base leading-relaxed text-left md:text-justify">
+                      <p className="font-Poppins text-gray-600 text-sm md:text-base leading-relaxed text-left md:text-justify">
                         {point}
                       </p>
                     </div>
@@ -139,7 +139,7 @@ const GovernanceSection = ({ lang }: GovernanceSectionProps) => {
               <h4 className="text-xl md:text-2xl lg:text-3xl font-gotu font-bold text-[#E46B2E] italic">
                 {isHi ? "संकल्प—" : "Resolution—"}
               </h4>
-              <p className="font-martel text-sm md:text-lg lg:text-xl opacity-90 max-w-2xl leading-relaxed">
+              <p className="font-Poppins text-sm md:text-lg lg:text-xl opacity-90 max-w-2xl leading-relaxed">
                 {isHi 
                   ? "स्वस्थ, सशक्त और विकसित मध्यप्रदेश का निर्माण है।" 
                   : "To build a healthy, empowered and developed Madhya Pradesh."}

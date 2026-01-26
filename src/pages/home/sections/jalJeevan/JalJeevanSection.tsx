@@ -32,13 +32,13 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
                   {isHi ? "शुद्ध जल – स्वस्थ जीवन – सशक्त मध्यप्रदेश" : "Pure Water – Healthy Life – Empowered MP"}
                 </span>
               </div>
-              <p className="font-martel text-gray-700 text-base md:text-xl leading-relaxed text-left md:text-justify">
+              <p className="font-Poppins text-gray-700 text-base md:text-xl leading-relaxed text-left md:text-justify">
                 {isHi 
                   ? "लोक स्वास्थ्य यांत्रिकी मंत्री के रूप में श्रीमती संपतिया उइके जी का प्रमुख संकल्प “हर घर तक सुरक्षित एवं शुद्ध पेयजल” पहुँचाना है। भारत सरकार के महत्वाकांक्षी जल जीवन मिशन के अंतर्गत वे मध्यप्रदेश में हर घर जल लक्ष्य को समयबद्ध, पारदर्शी और प्रभावी ढंग से साकार करने हेतु सतत प्रयासरत हैं।"
                   : "As PHED Minister, Smt. Sampatiya Uikey’s primary resolution is to deliver safe and pure drinking water to every home. Under the Jal Jeevan Mission, she is working to realize the goals in a transparent and effective manner."}
               </p>
               <div className="p-5 md:p-6 bg-gray-50 rounded-[1.5rem] md:rounded-[2rem] border-l-4 md:border-l-8 border-green">
-                <p className="font-martel text-gray-600 italic text-sm md:text-base leading-relaxed">
+                <p className="font-Poppins text-gray-600 italic text-sm md:text-base leading-relaxed">
                   {isHi 
                     ? "आदरणीय प्रधानमंत्री श्री नरेंद्र मोदी जी के मार्गदर्शन एवं माननीय मुख्यमंत्री डॉ. मोहन यादव जी के नेतृत्व में वे प्रदेश के प्रत्येक परिवार तक नल से जल उपलब्ध कराने के लिए पूर्ण प्रतिबद्धता के साथ कार्य कर रही हैं।"
                     : "Under the guidance of PM Narendra Modi and CM Dr. Mohan Yadav, she is working with full commitment to provide tap water to every family."}
@@ -61,7 +61,7 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3 p-3 md:p-4 bg-white border border-gray-100 rounded-xl md:rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                     <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-green shrink-0 mt-0.5" />
-                    <span className="font-martel text-sm md:text-lg text-gray-600">{item}</span>
+                    <span className="font-Poppins text-sm md:text-lg text-gray-600">{item}</span>
                   </div>
                 ))}
               </div>
@@ -80,7 +80,7 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
                     isHi ? "स्थानीय जल स्रोतों का पुनर्जीवन" : "Revival of local sources",
                     isHi ? "नियमित मॉनिटरिंग एवं फील्ड निरीक्षण" : "Regular field inspections"
                   ].map((p, i) => (
-                    <li key={i} className="flex items-center gap-2 font-martel text-sm md:text-lg text-gray-500">
+                    <li key={i} className="flex items-center gap-2 font-Poppins text-sm md:text-lg text-gray-500">
                       <div className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" /> {p}
                     </li>
                   ))}
@@ -88,7 +88,7 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
               </div>
               <div className="bg-green p-6 md:p-8 rounded-[2rem] md:rounded-[3rem] text-white relative shadow-xl overflow-hidden">
                 <Heart className="absolute -right-4 -bottom-4 w-16 h-16 md:w-24 md:h-24 opacity-10" />
-                <p className="relative z-10 font-martel italic text-base md:text-lg leading-relaxed">
+                <p className="relative z-10 font-Poppins italic text-base md:text-lg leading-relaxed">
                   {isHi 
                     ? "“स्वच्छ पेयजल केवल सुविधा नहीं, बल्कि जनस्वास्थ्य की आधारशिला है।”" 
                     : "“Clean water is the foundation of public health.”"}
@@ -114,7 +114,7 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
                     isHi ? "महिलाओं को कठिनाइयों से मुक्ति" : "Relief for women",
                     isHi ? "स्वच्छता एवं पोषण में सुधार" : "Better nutrition"
                   ].map((txt, i) => (
-                    <div key={i} className="text-[12px] md:text-xs font-martel text-gray-400 flex items-center gap-2">
+                    <div key={i} className="text-[12px] md:text-xs font-Poppins text-gray-400 flex items-center gap-2">
                       <div className="w-1 h-1 rounded-full bg-green shrink-0" /> {txt}
                     </div>
                   ))}
@@ -133,7 +133,7 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
                   <p className="text-[9px] md:text-xs opacity-60 uppercase  font-bold">The Ultimate Vision</p>
                 </div>
               </div>
-              <p className="font-martel text-sm md:text-lg leading-relaxed opacity-90 text-left">
+              <p className="font-Poppins text-sm md:text-lg leading-relaxed opacity-90 text-left">
                 {isHi 
                   ? "उनका स्पष्ट लक्ष्य है कि मध्यप्रदेश का प्रत्येक परिवार नियमित, पर्याप्त और गुणवत्तापूर्ण पेयजल प्राप्त करे और जल संकट से मुक्त गरिमापूर्ण जीवन जी सके।"
                   : "Her goal is for every family to receive regular and quality water for a life of dignity."}

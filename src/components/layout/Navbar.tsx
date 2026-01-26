@@ -11,7 +11,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import hi from "@/locales/hi";
 import en from "@/locales/en";
-import logo from "@/assets/13.jpeg";
+import logo from "@/assets/dpp.jpg";
 
 const Navbar = ({ lang, setLang }: { lang: "hi" | "en", setLang: (l: "hi" | "en") => void }) => {
   const t = lang === "hi" ? hi : en;
@@ -49,15 +49,15 @@ const Navbar = ({ lang, setLang }: { lang: "hi" | "en", setLang: (l: "hi" | "en"
 
         {/* BRAND */}
         <div className="flex items-center gap-3 shrink-0">
-          <div className="h-10 w-10 md:h-12 rounded-xl overflow-hidden border-2 border-[#E46B2E]">
+          <div className="h-10 w-10 md:h-14 md:w-14 rounded-full overflow-hidden  ">
             <img src={logo} alt="Logo" className="h-full w-full object-cover" />
           </div>
           <div className="flex flex-col">
             <h1 className="font-gotu font-black text-white text-sm md:text-xl leading-none">
               {lang === "hi" ? "संपतिया उइके" : "Sampatiya Uikey"}
             </h1>
-            <p className="text-[#eb7e48] text-[10px] md:text-[12px] font-bold uppercase  mt-1">
-              {lang === "hi" ? "कैबिनेट मंत्री" : "Cabinet Minister"}
+            <p className="text-[#eb7e48] text-[10px] md:text-[12px]  uppercase  mt-1">
+              {lang === "hi" ? "कैबिनेट मंत्री, मध्य प्रदेश" : "Cabinet Minister, Madhya Pradesh"}
             </p>
           </div>
         </div>
@@ -65,7 +65,7 @@ const Navbar = ({ lang, setLang }: { lang: "hi" | "en", setLang: (l: "hi" | "en"
         {/* DESKTOP NAV */}
         <div className="hidden xl:flex items-center gap-1 bg-[#196458] rounded-full p-1.5 border border-white/5">
           {navItems.map((item) => (
-            <a key={item.href} href={item.href} className="px-3 py-2 text-[14px] font-black text-white/70 hover:text-white transition-all relative group">
+            <a key={item.href} href={item.href} className="px-3 py-2 text-[14px]  text-white/70 hover:text-white transition-all relative group">
               {item.label}
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-[#E46B2E] group-hover:w-1/2 transition-all duration-500" />
             </a>
@@ -78,7 +78,7 @@ const Navbar = ({ lang, setLang }: { lang: "hi" | "en", setLang: (l: "hi" | "en"
             <Globe size={14} />
             <span className="text-[11px] font-black uppercase">{lang}</span>
           </button>
-          <a href="#contact" className="hidden md:flex bg-white text-[#12574c] px-6 py-2 rounded-2xl font-black text-[11px] md:text-[13px] uppercase hover:bg-[#E46B2E] hover:text-white transition-all">
+          <a href="#contact" className="hidden md:flex bg-white text-[#12574c] px-6 py-2 rounded-2xl  text-[11px] md:text-[13px] uppercase hover:bg-[#E46B2E] hover:text-white transition-all">
             {t.cta.contact}
           </a>
           <button onClick={() => setIsOpen(true)} className="xl:hidden h-12 w-12 flex items-center justify-center bg-white/10 text-white rounded-2xl border border-white/10">
@@ -148,7 +148,7 @@ const Navbar = ({ lang, setLang }: { lang: "hi" | "en", setLang: (l: "hi" | "en"
                 <a
                   href="#contact"
                   onClick={() => setIsOpen(false)}
-                  className="w-full flex items-center justify-between bg-[#E46B2E] text-white px-6 py-4 rounded-[2rem] font-black uppercase text-sm md:text-xl shadow-xl active:scale-95 transition-transform"
+                  className="w-full flex items-center justify-between bg-[#E46B2E] text-white px-6 py-4 rounded-[2rem]  uppercase text-sm md:text-xl shadow-xl active:scale-95 transition-transform"
                 >
                   <span>{t.cta.contact}</span>
                   <Phone size={20} />
