@@ -57,7 +57,7 @@ const Navbar = ({ lang, setLang }: { lang: "hi" | "en", setLang: (l: "hi" | "en"
               {lang === "hi" ? "संपतिया उइके" : "Sampatiya Uikey"}
             </h1>
             <p className="text-[#eb7e48] text-[10px] md:text-[12px]  uppercase  mt-1">
-              {lang === "hi" ? "कैबिनेट मंत्री, मध्य प्रदेश" : "Cabinet Minister, Madhya Pradesh"}
+              {lang === "hi" ? "कैबिनेट मंत्री, मध्य प्रदेश शासन" : "Cabinet Minister, Madhya Pradesh Govt."}
             </p>
           </div>
         </div>
