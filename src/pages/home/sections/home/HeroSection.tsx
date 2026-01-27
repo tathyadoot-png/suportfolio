@@ -28,7 +28,7 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
     <section id="home" className="relative min-h-screen w-full bg-green flex flex-col lg:flex-row overflow-hidden ">
       
       {/* 1. RIGHT SIDE: THE VISUAL (Top on Mobile, 45% Width on Desktop) */}
-      <div className="relative w-full lg:w-[45%] h-[50vh] lg:h-screen order-first lg:order-last">
+      <div className="relative w-full lg:w-[45%] h-[50vh] lg:h-screen order-first lg:order-last top-20">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -104,9 +104,9 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
           className="mt-8 lg:mt-12 max-w-lg"
         >
           <div className="pl-4 lg:pl-6 border-l border-primary/30 space-y-3 lg:space-y-4">
-            <p className="text-white/90 text-lg sm:text-xl lg:text-2xl font-medium font-gotu leading-normal">
+            <p className="text-white/90 text-lg sm:text-xl lg:text-2xl font-medium font-gotu leading-normal ">
             {isHi 
-    ? "लोक स्वास्थ्य यांत्रिकी मंत्री, मध्यप्रदेश शासन | विधायक: मण्डला" 
+    ? "लोक स्वास्थ्य यांत्रिकी मंत्री,म.प्र. शासन | विधायक: मण्डला" 
     : "Minister of Public Health Engineering, Govt. of MP | MLA: Mandla"}
             </p>
             <p className="text-white/50 text-sm lg:text-lg leading-relaxed font-Poppins">

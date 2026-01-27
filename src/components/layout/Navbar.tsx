@@ -44,12 +44,12 @@ const Navbar = ({ lang, setLang }: { lang: "hi" | "en", setLang: (l: "hi" | "en"
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-700 ${scrolled ? "py-3 px-4" : "py-6 px-4"}`}>
+    <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-700 ${scrolled ? "py-3 px-4" : "py-1 px-2"}`}>
       <div className={`max-w-[1920px] mx-auto transition-all duration-700 rounded-[2rem] flex items-center justify-between px-6 lg:px-10 ${scrolled ? "bg-[#12574c]/90 backdrop-blur-2xl shadow-xl border border-white/10 h-16 md:h-20" : "bg-transparent h-20"}`}>
 
         {/* BRAND */}
         <div className="flex items-center gap-3 shrink-0">
-          <div className="h-10 w-10 md:h-14 md:w-14 rounded-full overflow-hidden  ">
+          <div className="h-12 w-12 md:h-14 md:w-14 rounded-full overflow-hidden  ">
             <img src={logo} alt="Logo" className="h-full w-full object-cover" />
           </div>
           <div className="flex flex-col">
