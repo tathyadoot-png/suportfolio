@@ -32,13 +32,13 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
                   {isHi ? "शुद्ध जल – स्वस्थ जीवन – सशक्त मध्यप्रदेश" : "Pure Water – Healthy Life – Empowered MP"}
                 </span>
               </div>
-              <p className="font-Poppins text-gray-700 text-base md:text-xl leading-relaxed text-left md:text-justify">
+              <p className="font-Poppins text-gray-700 text-base md:text-xl leading-relaxed  text-justify">
                 {isHi 
                   ? "लोक स्वास्थ्य यांत्रिकी मंत्री के रूप में श्रीमती संपतिया उइके जी का प्रमुख संकल्प “हर घर तक सुरक्षित एवं शुद्ध पेयजल” पहुँचाना है। भारत सरकार के महत्वाकांक्षी जल जीवन मिशन के अंतर्गत वे मध्यप्रदेश में हर घर जल लक्ष्य को समयबद्ध, पारदर्शी और प्रभावी ढंग से साकार करने हेतु सतत प्रयासरत हैं।"
                   : "As PHED Minister, Smt. Sampatiya Uikey’s primary resolution is to deliver safe and pure drinking water to every home. Under the Jal Jeevan Mission, she is working to realize the goals in a transparent and effective manner."}
               </p>
               <div className="p-5 md:p-6 bg-gray-50 rounded-[1.5rem] md:rounded-[2rem] border-l-4 md:border-l-8 border-green">
-                <p className="font-Poppins text-gray-600 italic text-sm md:text-base leading-relaxed">
+                <p className="font-Poppins text-gray-600 italic text-sm md:text-base leading-relaxed text-justify">
                   {isHi 
                     ? "आदरणीय प्रधानमंत्री श्री नरेंद्र मोदी जी के मार्गदर्शन एवं माननीय मुख्यमंत्री डॉ. मोहन यादव जी के नेतृत्व में वे प्रदेश के प्रत्येक परिवार तक नल से जल उपलब्ध कराने के लिए पूर्ण प्रतिबद्धता के साथ कार्य कर रही हैं।"
                     : "Under the guidance of PM Narendra Modi and CM Dr. Mohan Yadav, she is working with full commitment to provide tap water to every family."}
@@ -133,7 +133,7 @@ const JalJeevanSection = ({ lang }: JalJeevanSectionProps) => {
                   <p className="text-[9px] md:text-xs opacity-60 uppercase  font-bold">The Ultimate Vision</p>
                 </div>
               </div>
-              <p className="font-Poppins text-sm md:text-lg leading-relaxed opacity-90 text-left">
+              <p className="font-Poppins text-sm md:text-lg leading-relaxed opacity-90 text-left text-justify">
                 {isHi 
                   ? "उनका स्पष्ट लक्ष्य है कि मध्यप्रदेश का प्रत्येक परिवार नियमित, पर्याप्त और गुणवत्तापूर्ण पेयजल प्राप्त करे और जल संकट से मुक्त गरिमापूर्ण जीवन जी सके।"
                   : "Her goal is for every family to receive regular and quality water for a life of dignity."}

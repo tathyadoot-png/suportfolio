@@ -20,7 +20,8 @@ const MainLayout = () => {
 
   useEffect(() => {
     localStorage.setItem("lang", lang);
-    const timer = setTimeout(() => setLoading(false), 3200);
+    // Timing 3200ms se kam karke 2200ms kar di hai (Better UX)
+    const timer = setTimeout(() => setLoading(false), 2200);
     return () => clearTimeout(timer);
   }, [lang]);
 
@@ -37,10 +38,11 @@ const MainLayout = () => {
   const firstName = useMemo(() => splitText(isHi ? "संपतिया" : "SAMPATIYA"), [isHi]);
   const lastName = useMemo(() => splitText(isHi ? "उइके" : "UIKEY"), [isHi]);
 
-  // Modern Animation Variants
   const containerVars: Variants = {
     exit: {
-      transition: { staggerChildren: 0.1 }
+      // Jab loader hatega, toh baki elements bhi turant gayab honge
+      opacity: 0,
+      transition: { duration: 0.5, when: "afterChildren" }
     }
   };
 
@@ -48,7 +50,7 @@ const MainLayout = () => {
     initial: { scaleY: 1 },
     exit: { 
       scaleY: 0,
-      transition: { duration: 1, ease: [0.85, 0, 0.15, 1] } 
+      transition: { duration: 0.8, ease: [0.85, 0, 0.15, 1] } 
     }
   };
 
@@ -58,6 +60,12 @@ const MainLayout = () => {
       y: 0, 
       opacity: 1,
       transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] }
+    },
+    // Fix: Text ko panel ke sath fade out karne ke liye exit variant
+    exit: {
+      opacity: 0,
+      y: -20,
+      transition: { duration: 0.4 }
     }
   };
 
@@ -72,39 +80,32 @@ const MainLayout = () => {
             exit="exit"
             className="fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden bg-transparent"
           >
-            {/* Split Panels - Modern Way to Reveal */}
             <motion.div 
               variants={panelVars}
               className="absolute inset-0 bg-[#0A1A17] origin-top z-0" 
             />
             
-            {/* Content Wrapper */}
-            <div className="relative z-10 flex flex-col items-center">
-              {/* Subtle Symbol */}
+            <motion.div 
+              variants={textRevealVars} // Wrapper ko variants diye taaki exit control ho sake
+              className="relative z-10 flex flex-col items-center"
+            >
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 0.2, scale: 1 }}
-                transition={{ duration: 1.5 }}
                 className="mb-8"
               >
                 <img src={bjp} className="w-16 grayscale brightness-200" alt="" />
               </motion.div>
 
+              <div className="overflow-hidden py-2 px-4 w-full flex justify-center">
+                <motion.h2 
+                  className="text-white text-[10vw] sm:text-[8vw] md:text-[6vw] font-gotu md:py-6 font-black flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-center py-6 leading-none"
+                >
+                  <span>{firstName.join("")}</span>
+                  <span className="text-[#E46B2E] font-light">{lastName.join("")}</span>
+                </motion.h2>
+              </div>
 
-       {/* Main Name Reveal */}
-<div className="overflow-hidden py-2 px-4 w-full flex justify-center">
-  <motion.h2 
-    variants={textRevealVars}
-    initial="hidden"
-    animate="visible"
-    className="text-white text-[10vw] sm:text-[8vw] md:text-[6vw] font-gotu md:py-6 font-black flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-center py-6 leading-none"
-  >
-    <span>{firstName.join("")}</span>
-    <span className="text-[#E46B2E] font-light">{lastName.join("")}</span>
-  </motion.h2>
-</div>
-
-              {/* Minimal Animated Divider */}
               <div className="relative w-full max-w-[400px] h-[1px] mt-4 overflow-hidden">
                 <motion.div 
                   initial={{ x: "-100%" }}
@@ -114,20 +115,18 @@ const MainLayout = () => {
                 />
               </div>
 
-              {/* Designation Reveal */}
               <div className="overflow-hidden mt-4">
                 <motion.p
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
-                  transition={{ delay: 0.8, duration: 1 }}
-                  className="text-white/40 text-[10px] md:text-[12px] font-black  uppercase"
+                  transition={{ delay: 0.5, duration: 0.8 }} // Delay kam kiya
+                  className="text-white/40 text-[10px] md:text-[12px] font-black uppercase"
                 >
                   {isHi ? "कैबिनेट मंत्री • मध्यप्रदेश शासन" : "Cabinet Minister • Govt. of MP"}
                 </motion.p>
               </div>
-            </div>
+            </motion.div>
 
-            {/* Background Texture Overlay */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
           </motion.div>
         )}
@@ -135,9 +134,9 @@ const MainLayout = () => {
 
       {!loading && (
         <motion.div 
-          initial={{ opacity: 0, y: 20 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 1, ease: "easeOut" }}
+          initial={{ opacity: 0 }} 
+          animate={{ opacity: 1 }} 
+          transition={{ duration: 0.8 }}
         >
           <Navbar lang={lang} setLang={setLang} />
           <StickySocial /> 

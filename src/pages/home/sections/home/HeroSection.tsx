@@ -28,7 +28,7 @@ const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
     <section id="home" className="relative min-h-screen w-full bg-green flex flex-col lg:flex-row overflow-hidden ">
       
       {/* 1. RIGHT SIDE: THE VISUAL (Top on Mobile, 45% Width on Desktop) */}
-      <div className="relative w-full lg:w-[45%] h-[50vh] lg:h-screen order-first lg:order-last top-20">
+      <div className="relative w-full lg:w-[45%] h-[50vh] lg:h-screen order-first lg:order-last md:top-0 top-20">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}

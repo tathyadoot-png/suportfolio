@@ -120,14 +120,14 @@ const AboutSection = ({ lang }: { lang: "hi" | "en" }) => {
   {/* Description Text */}
   <div className="space-y-5 md:space-y-6 text-[#12574c]/80 text-base sm:text-lg md:text-xl text-left md:text-justify leading-relaxed font-light">
     {/* Highlighted Paragraph */}
-    <p className="border-l-[3px] md:border-l-4 border-[#E46B2E]/30 pl-4 md:pl-6 italic bg-gradient-to-r from-[#E46B2E]/5 to-transparent py-3 md:py-4 rounded-r-2xl">
+    <p className="border-l-[3px] md:border-l-4 border-[#E46B2E]/30 pl-4 md:pl-6 italic bg-gradient-to-r from-[#E46B2E]/5 to-transparent py-3 md:py-4 rounded-r-2xl text-justify">
       {isHi 
         ? "श्रीमती संपतिया उइके जी का जन्म 04 सितम्बर 1967 को ग्राम सुर्खी, जिला मण्डला, मध्यप्रदेश में हुआ। जमीनी स्तर से सार्वजनिक जीवन की शुरुआत कर उन्होंने सेवा, समर्पण और संघर्ष को अपना मूल मंत्र बनाया।"
         : "Mrs. Sampatiya Uikey was born on September 4, 1967, in Surkhi village, Mandla district, Madhya Pradesh. Beginning her public life from the grassroots, she embraced service, dedication, and struggle as her core values."}
     </p>
 
     {/* Standard Paragraph */}
-    <p className="pl-1 md:pl-2 text-sm sm:text-base md:text-xl">
+    <p className="pl-1 md:pl-2 text-sm sm:text-base md:text-xl text-justify">
       {isHi
         ? "जनजातीय समाज, महिलाओं के सशक्तिकरण, ग्रामीण विकास एवं जनस्वास्थ्य के क्षेत्र में उनके सतत प्रयासों के माध्यम से उन्होंने जन-जन का विश्वास अर्जित किया है। जनसेवा के ध्येय के साथ अपने क्षेत्र की समस्याओं के समाधान और समग्र विकास के लिए निरंतर कार्यरत रही हैं। जनता के विश्वास और समर्थन के बल पर वे आज मण्डला विधानसभा क्षेत्र से विधायक हैं तथा वर्तमान में लोक स्वास्थ्य यांत्रिकी मंत्री, मध्यप्रदेश शासन के पद पर कार्यरत हैं। जनसेवा और समावेशी विकास के ध्येय के साथ वे पूर्ण निष्ठा से मध्यप्रदेश के विकास के लिए समर्पित हैं।"
         : "Through her sustained efforts in the fields of tribal society, women’s empowerment, rural development, and public health, she has earned the trust of the people. With the objective of public service, she has continuously worked toward resolving the problems of her constituency and ensuring its overall development. On the strength of the people’s trust and support, she is today a Member of the Legislative Assembly from the Mandla Assembly constituency and is currently serving as the Minister of Public Health Engineering in the Government of Madhya Pradesh. With the commitment to public service and inclusive development, she is wholeheartedly dedicated to the development of Madhya Pradesh."}
@@ -190,7 +190,7 @@ const AboutSection = ({ lang }: { lang: "hi" | "en" }) => {
           Post Graduate (स्नातकोत्तर)
         </p>
       </div>
-      <p className="text-white/70 leading-relaxed text-sm sm:text-base md:text-lg text-left md:text-justify font-light italic pl-4 border-l-2 border-[#E46B2E]/40">
+      <p className="text-white/70 leading-relaxed text-sm sm:text-base md:text-lg text-left md:text-justify font-light italic pl-4 border-l-2 border-[#E46B2E]/40 text-justify">
         {isHi
           ? "श्रीमती उइके जी ने स्नातक एवं स्नातकोत्तर तक शिक्षा प्राप्त की है। उनकी शैक्षणिक यात्रा ने उन्हें विचारशीलता, संवेदनशीलता और प्रभावी संवाद क्षमता प्रदान की है।"
           : "Smt. Uikey has completed her Graduation and Post-Graduation. Her academic journey has provided her with thoughtfulness and effective communication skills."}
