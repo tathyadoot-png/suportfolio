@@ -11,10 +11,11 @@ import slid8 from "@/assets/img31.jpg";
 import slid5 from "@/assets/img19.jpg";
 import slid6 from "@/assets/slid3.jpeg";
 import slid7 from "@/assets/slid5.jpeg";
+import slid9 from "@/assets/slid8.jpeg";
 
 const HeroSection = ({ lang = "hi" }: { lang?: "hi" | "en" }) => {
   const isHi = lang === "hi";
-  const images = [slid1, slid2, slid3, slid5, slid8, slid6, slid7];
+  const images = [slid1, slid2, slid3, slid5, slid8, slid6, slid7,slid9];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
