@@ -36,6 +36,7 @@ const Navbar = ({ lang, setLang }: { lang: "hi" | "en", setLang: (l: "hi" | "en"
   const navItems = [
     { label: t.nav.home, href: "#home" },
     { label: t.nav.about, href: "#about" },
+    { label: t.nav.activities, href: "#activities" },
     { label: t.nav.journey, href: "#journey" },
     { label: t.nav.governance, href: "#governance" },
     { label: t.nav.jalJeevan, href: "#jalJeevan" },

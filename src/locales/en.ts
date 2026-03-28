@@ -2,6 +2,7 @@ const en = {
   nav: {
     home: "Home",
     about: "About",
+    activities: "Activities",
     journey: "Journey",
     governance: "Governance",
     // contributions: "Contributions",
