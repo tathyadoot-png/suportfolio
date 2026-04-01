@@ -3,20 +3,20 @@ import img2 from "@/assets/img2.jpeg";
 import img3 from "@/assets/img3.jpeg";
 import img4 from "@/assets/img4.jpeg";
 import img5 from "@/assets/img5.jpeg";
-import img6 from "@/assets/img6.jpg";
-import img7 from "@/assets/img7.jpg";
-import img8 from "@/assets/img8.jpg";
-import img9 from "@/assets/img9.jpg";
-import img10 from "@/assets/img10.jpg";
-import img11 from "@/assets/img11.jpg";
-import img12 from "@/assets/img12.jpg";
-import img13 from "@/assets/img13.jpg";
-import img14 from "@/assets/img14.jpg";
-import img15 from "@/assets/img15.jpg";
-import img16 from "@/assets/img16.jpg";
-import img17 from "@/assets/img17.jpg";
-import img18 from "@/assets/img18.jpg";
-import img19 from "@/assets/img3.jpg";
+import su1 from "@/assets/activities/ev1/su1.jfif";
+import su3 from "@/assets/activities/ev1/su3.jfif";
+import su2 from "@/assets/activities/ev1/su2.jfif";
+import su4 from "@/assets/activities/ev1/su4.jfif";
+import su5 from "@/assets/activities/ev2/su1.jpg";
+import su6 from "@/assets/activities/ev2/su2.jpg";
+import su7 from "@/assets/activities/ev2/su3.jpg";
+import su8 from "@/assets/activities/ev2/su4.jpg";
+import su9 from "@/assets/activities/ev2/su5.jpg";
+import su10 from "@/assets/activities/ev2/su6.jpg";
+import su11 from "@/assets/activities/ev2/su7.jpg";
+import su12 from "@/assets/activities/ev2/su8.jpg";
+
+
 
 export interface Activity {
   id: number;
@@ -35,184 +35,35 @@ export interface Activity {
 }
 
 export const activitiesData: Activity[] = [
-  {
-    id: 1,
-    title: {
-      hi: "जनसंपर्क अभियान",
-      en: "Public Interaction अभियान",
-    },
-    description: {
-      hi: "जनता के बीच जाकर समस्याओं को सुना और समाधान का आश्वासन दिया गया।",
-      en: "Visited public to understand issues and provide solutions.",
-    },
-    cover: img4,
-    images: [img1, img2, img3, img4, img5],
-    date: "Jan 2026",
-    location: "Mandla",
+ {
+  id: 1,
+  title: {
+    hi: "लोक स्वास्थ्य यांत्रिकी विभाग की परामर्शदात्री समिति की बैठक",
+    en: "Advisory Committee Meeting of Public Health Engineering Department",
   },
-  {
-    id: 2,
-    title: {
-      hi: "विकास कार्य निरीक्षण",
-      en: "Development Work Review",
-    },
-    description: {
-      hi: "चल रहे विकास कार्यों का निरीक्षण कर प्रगति का आकलन किया गया।",
-      en: "Reviewed ongoing development projects.",
-    },
-    cover: img8,
-    images: [img8, img9, img10, img11],
-    date: "Feb 2026",
-    location: "Bhopal",
+  description: {
+    hi: "26 फरवरी 2026 को विधानसभा सचिवालय, भोपाल में लोक स्वास्थ्य यांत्रिकी विभाग की परामर्शदात्री समिति की बैठक आयोजित की गई। बैठक में पेयजल व्यवस्थाओं के सुदृढ़ीकरण, ग्रामीण नल-जल योजनाओं की प्रगति, जल गुणवत्ता परीक्षण और ग्रीष्मकालीन तैयारियों पर विस्तृत समीक्षा की गई। सभी योजनाओं को समयसीमा में पूर्ण कर आमजन को निर्बाध पेयजल उपलब्ध कराने पर जोर दिया गया।",
+    en: "On 26 February 2026, an advisory committee meeting of the Public Health Engineering Department was held at the Assembly Secretariat, Bhopal. Discussions focused on strengthening drinking water systems, progress of rural tap water schemes, water quality testing, and summer preparedness.",
   },
-  {
-    id: 3,
-    title: {
-      hi: "महिला सशक्तिकरण कार्यक्रम",
-      en: "Women Empowerment Event",
-    },
-    description: {
-      hi: "महिलाओं को आत्मनिर्भर बनाने हेतु कार्यक्रम आयोजित किया गया।",
-      en: "Program focused on empowering women.",
-    },
-    cover: img7,
-    images: [img5, img6, img7],
-    date: "Mar 2026",
-    location: "Jabalpur",
+  cover: su1,
+  images: [su1, su2, su3, su4],
+  date: "Feb 2026",
+  location: "Bhopal",
+},
+  
+ {
+  id: 2,
+  title: {
+    hi: "जल जीवन मिशन को नई गति: मध्य प्रदेश और केंद्र के बीच महत्वपूर्ण MoU संपन्न",
+    en: "Jal Jeevan Mission Boosted: Key MoU Signed Between Madhya Pradesh and Central Government",
   },
-  {
-    id: 4,
-    title: {
-      hi: "युवा एवं खेल गतिविधि",
-      en: "Youth & Sports Event",
-    },
-    description: {
-      hi: "युवाओं को खेलों के प्रति प्रेरित किया गया।",
-      en: "Encouraged youth participation in sports.",
-    },
-    cover: img15,
-    images: [img15, img16, img17],
-    date: "Apr 2026",
-    location: "Indore",
+  description: {
+    hi: "17 मार्च 2026 को जल जीवन मिशन को प्रभावी बनाने हेतु नई दिल्ली में जल शक्ति मंत्रालय और मध्य प्रदेश सरकार के बीच महत्वपूर्ण MoU पर हस्ताक्षर किए गए। इस पहल के तहत ग्रामीण क्षेत्रों में हर घर तक स्वच्छ जल आपूर्ति, सेवा गुणवत्ता में सुधार, पारदर्शिता और तय समयसीमा में लक्ष्यों की प्राप्ति सुनिश्चित करने पर जोर दिया गया। यह समझौता विशेष रूप से दूरस्थ एवं आदिवासी क्षेत्रों में जल उपलब्धता बढ़ाकर जीवन स्तर सुधारने में सहायक सिद्ध होगा।",
+    en: "On 17 March 2026, a significant MoU was signed between the Ministry of Jal Shakti and the Government of Madhya Pradesh in New Delhi to strengthen the Jal Jeevan Mission. The initiative focuses on ensuring clean tap water to every rural household, improving service quality, enhancing transparency, and achieving targets within deadlines.",
   },
-  {
-    id: 5,
-    title: {
-      hi: "सांस्कृतिक कार्यक्रम",
-      en: "Cultural Event",
-    },
-    description: {
-      hi: "स्थानीय संस्कृति और परंपराओं को बढ़ावा दिया गया।",
-      en: "Promoted local culture and traditions.",
-    },
-    cover: img14,
-    images: [img14, img15, img16],
-    date: "May 2026",
-    location: "Seoni",
-  },
-  {
-    id: 6,
-    title: {
-      hi: "जनसभा संबोधन",
-      en: "Public Rally Address",
-    },
-    description: {
-      hi: "जनसभा में विकास योजनाओं पर चर्चा की गई।",
-      en: "Addressed public regarding development plans.",
-    },
-    cover: img9,
-    images: [img9, img10, img11],
-    date: "Jun 2026",
-    location: "Chhindwara",
-  },
-  {
-    id: 7,
-    title: {
-      hi: "स्वास्थ्य शिविर आयोजन",
-      en: "Health Camp आयोजन",
-    },
-    description: {
-      hi: "ग्रामीण क्षेत्रों में स्वास्थ्य शिविर का आयोजन किया गया।",
-      en: "Organized health camp in rural areas.",
-    },
-    cover: img6,
-    images: [img6, img7, img8],
-    date: "Jul 2026",
-    location: "Balaghat",
-  },
-  {
-    id: 8,
-    title: {
-      hi: "शिक्षा जागरूकता अभियान",
-      en: "Education Awareness Drive",
-    },
-    description: {
-      hi: "बच्चों को शिक्षा के महत्व के बारे में जागरूक किया गया।",
-      en: "Created awareness about importance of education.",
-    },
-    cover: img11,
-    images: [img11, img12, img13],
-    date: "Aug 2026",
-    location: "Mandla",
-  },
-  {
-    id: 9,
-    title: {
-      hi: "ग्राम विकास बैठक",
-      en: "Village Development Meeting",
-    },
-    description: {
-      hi: "गांव के विकास के लिए बैठक आयोजित की गई।",
-      en: "Meeting held for village development planning.",
-    },
-    cover: img12,
-    images: [img12, img13, img14],
-    date: "Sep 2026",
-    location: "Dindori",
-  },
-  {
-    id: 10,
-    title: {
-      hi: "ग्राम विकास बैठक",
-      en: "Village Development Meeting",
-    },
-    description: {
-      hi: "गांव के विकास के लिए बैठक आयोजित की गई।",
-      en: "Meeting held for village development planning.",
-    },
-    cover: img12,
-    images: [img12, img13, img14],
-    date: "Sep 2026",
-    location: "Dindori",
-  },
-  {
-    id: 11,
-    title: {
-      hi: "ग्राम विकास बैठक",
-      en: "Village Development Meeting",
-    },
-    description: {
-      hi: "गांव के विकास के लिए बैठक आयोजित की गई।",
-      en: "Meeting held for village development planning.",
-    },
-    cover: img12,
-    images: [img12, img13, img14],
-    date: "Sep 2026",
-    location: "Dindori",
-  },
-  {
-    id: 12,
-    title: {
-      hi: "ग्राम विकास बैठक",
-      en: "Village Development Meeting",
-    },
-    description: {
-      hi: "गांव के विकास के लिए बैठक आयोजित की गई।",
-      en: "Meeting held for village development planning.",
-    },
-    cover: img6,
-    images: [img12, img13, img14],
-    date: "Sep 2026",
-    location: "Dindori",
-  },
+  cover: su5,
+  images: [su5, su6, su7, su8, su9, su10, su11, su12],
+  date: "March 2026",
+  location: "Bhopal",
+},
 ];

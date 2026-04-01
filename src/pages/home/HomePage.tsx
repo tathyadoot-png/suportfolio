@@ -26,9 +26,9 @@ const HomePage = () => {
 <section id="about">
   <AboutSection lang={lang} />
 </section>
-{/* <section id="activities">
+<section id="activities">
   <ActivitiesSection lang={lang} />
-</section> */}
+</section>
 <section id="journey">
   <JourneySection lang={lang} />
 </section>

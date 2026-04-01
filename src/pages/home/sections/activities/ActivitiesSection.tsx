@@ -88,6 +88,7 @@ const ActivitiesSection = ({ lang }: { lang: "hi" | "en" }) => {
                 <div className="p-6 space-y-3">
                   <div className="flex items-center gap-3 text-[10px] font-bold tracking-widest uppercase text-orange-600">
                     <span className="px-2 py-1 bg-orange-50 rounded-md">{item.location}</span>
+                    <span className="px-2 py-1 bg-orange-50 rounded-md">{item.date}</span>
                   </div>
                   <h3 className="text-xl font-bold text-[#12574c] leading-tight group-hover:text-orange-600 transition-colors">
                     {isHi ? item.title.hi : item.title.en}
